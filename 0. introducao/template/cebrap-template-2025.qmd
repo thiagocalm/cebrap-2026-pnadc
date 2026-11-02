@@ -1,0 +1,145 @@
+---
+title: "cebrap-template"
+subtitle: "<span style='font-size:2em;'> Practice session</span>"
+author: "Thiago Cordeiro Almeida"
+institute: "Universität Hamburg <br> Regieren in politischen Mehrebenensystemen <br>Aufbaumodul 1"
+date: today
+date-format: long
+footer: "cebrap.lab - Introdução à análise de regressão para pesquisas sociais"
+logo: "cebrap-imagem.png"
+code-link: true
+format:
+  revealjs:
+    theme: cebrap2025.scss
+    math: mathjax
+    # scrollable: true
+    # standalone: true
+    # embed-resources: true
+    transition: fade
+    background-transition: fade
+    highlight-style: ayu-mirage
+    slide-number: "c"
+    controls-layout: bottom-right
+    fig-cap-location: top
+    # fig-format: svg
+    pdf-separate-fragments: false
+    # fig-align: center
+editor: visual
+execute:
+  freeze: auto
+  echo: true
+---
+
+# Inicio da aula {.theme-first}
+
+## Tópicos da aula {.theme-next}
+::: columns
+
+::: {.column width="30%"}
+Tópicos que vamos cobrir hoje são:
+:::
+
+::: {.column width="70%"}
+Tópico 1
+
+Tópico 2
+
+Tópico 3
+:::
+
+:::
+
+
+## Novo tópico - Tópico 1 {.theme-next}
+
+::: columns
+
+::: {.column width="30%"}
+Tópicos que vamos cobrir hoje são:
+:::
+
+::: {.column width="70%"}
+
+::: {.fragment}
+Topico 1
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+Tópico 2
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+Tópico 3
+:::
+
+:::
+:::
+
+## Subtopic {.theme-subtopic}
+
+### First subtopic to be treated
+
+:::: {.columns}
+
+::: {.column width="40%"}
+contents...
+:::
+
+::: {.column width="60%"}
+contents...
+:::
+
+::::
+
+
+## Another slide
+Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+
+## Bullets
+
+When you click the **Render** button a document will be generated that includes:
+
+- Content authored with markdown
+- Output from executable code
+
+  - Level 2
+  - Level 2
+
+    - Level 3
+    - Level 3
+    
+## Bullets with font size smallest {.font-size-smallest}
+
+When you click the **Render** button a document will be generated that includes:
+
+- Content authored with markdown
+- Output from executable code
+
+  - Level 2
+  - Level 2
+
+    - Level 3
+    - Level 3
+
+# Pausa! {.theme-stop}
+
+<div style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;">
+  <img src="stop/stop.gif" 
+       style="border-radius: 50%; border:5px solid #708d81; width:450px; height:auto;" />
+</div>
+
+
+
+## Code
+
+When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+# Cebrap - fim {.cebrap-fim}
+
+Mudar as informações contidas em cada linha aqui.
+
+Podemos colocar outras aqui
