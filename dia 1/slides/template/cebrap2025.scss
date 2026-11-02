@@ -1,0 +1,214 @@
+/**
+ * Adapted from 'Solarized Light theme for reveal.js' to be used in cebrap.lab.
+ * Author: Achim Staebler (adatation made by Thiago Almeida)
+ *
+ * Adapted for Quarto by Posit, PBC
+ * Copyright (C) 2024 Posit, PBC
+ */
+
+/*-- scss:defaults --*/
+
+// Include theme-specific fonts
+@import url(./fonts/league-gothic/league-gothic.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+$font-family-sans-serif: Lato, sans-serif !default;
+
+/**
+ * Solarized colors by Ethan Schoonover
+ */
+// Solarized colors
+$base03: #002b36;
+$base02: #465362;
+$base01: #586e75;
+$base00: #657b83;
+$base0: #839496;
+$base1: #93a1a1;
+$base2: #f7f7f7;
+$base3: #fefefe;
+$yellow: #b58900;
+$orange: #cb4b16;
+$orangelight: #fcece5;
+$red: #dc322f;
+$magenta: #d33682;
+$violet: #6c71c4;
+$blue: #268bd2;
+$cyan: #2aa198;
+$green: #859900;
+$cebrapgreen: #708d81;
+$cebrapgreenlight: #d3dfce;
+
+// Override theme settings
+$body-color: $cebrapgreen !default;
+$link-color: $orange !default;
+$selection-bg: $cyan !default;
+
+// headings
+$presentation-heading-font: "League Gothic", sans-serif !default; // from settings.scss
+$presentation-heading-color: $cebrapgreen !default;
+$presentation-heading-text-transform: uppercase !default; // from settings.scss
+$presentation-heading-text-shadow: none !default;
+$presentation-heading-font-weight: normal !default;
+
+
+// background
+$body-bg: $base3 !default;
+
+$overlayElementBgColor: 0, 0, 0 !default;
+$overlayElementFgColor: 240, 240, 240 !default;
+
+// different slide backgrounds
+//.next-class {
+//    background-color: $cebrapgreen !important;
+//    color: $base3 !important;
+//}
+
+.theme-first {
+  &:is(.slide-background) {
+    background-color: $cebrapgreen;
+  }
+  h1 {
+    color: $base3 !important;
+  }
+  h2, h3, h4, h5, p, pre {
+    margin-left: 100px;
+    color: $base3 !important;
+    text-align: center;
+  }
+}
+
+.theme-next {
+  &:is(.slide-background) {
+    background-color: $cebrapgreen;
+  }
+  h2, h3, h4, h5,{
+    margin-left: 100px;
+    color: $base3 !important;
+    text-align: center;
+  }
+   p, pre {
+     text-align: left;
+     color: $base3 !important;
+   }
+
+   ul, li, ol {
+    color: $base3  !important;
+    margin-bottom: auto;
+   }
+}
+
+.theme-subtopic {
+  &:is(.slide-background) {
+    background-color: $base3;
+  }
+  h2 {
+    margin-left: 100px;
+    color: $cebrapgreen !important;
+    text-align: left;
+  }
+
+  h3, h4, h5, p, pre {
+    margin-left: 100px;
+    color: $cebrapgreen !important;
+    text-align: left;
+  }
+}
+
+.theme-subtopic-assumption {
+  &:is(.slide-background) {
+    background-color: $base3;
+  }
+  h2 {
+    margin-left: 100px;
+    color: $cebrapgreen !important;
+    text-align: left;
+  }
+
+  h3, p, pre {
+    margin-left: 100px;
+    color: $cebrapgreen !important;
+    text-align: left;
+  }
+  h4, h5 {
+    margin-left: 100px;
+    color: $orange !important;
+    text-align: left;
+  }
+}
+
+.theme-stop {
+  &:is(.slide-background) {
+    background-color: $base3;
+  }
+  h1 {
+    color: $cebrapgreen !important;
+    text-align: left;
+  }
+  h2 {
+    margin-left: 100px;
+    color: $cebrapgreen !important;
+    text-align: right;
+  }
+
+  h3, h4, h5, p, pre {
+    margin-left: 100px;
+    color: $cebrapgreen !important;
+    text-align: left;
+  }
+}
+
+.font-size-smallest{
+  p, pre {
+    font-size: 0.7em;
+  }
+  ul, li, ol {
+    font-size: 0.7em;
+   }
+   h2, h3, h4, h5 {
+    font-size: 0.7em;
+  }
+}
+
+.font-size-small{
+  p, pre {
+    font-size: 0.8em;
+  }
+  ul, li, ol {
+    font-size: 0.8em;
+   }
+   h2, h3, h4, h5 {
+    font-size: 0.8em;
+  }
+}
+
+.cebrap-fim {
+  h1{
+    text-align: center;
+  }
+  h2, h3, h4, h5 {
+    text-align: left;
+    margin-left: 100px;
+  }
+
+}
+
+/**
+ * example of how to apply it... ## Slide Background {.topic-background}
+ */
+
+// list color
+
+ul, li, ol {
+  color: $cebrapgreen;
+  margin-bottom: auto;
+}
+
+// code blocks
+$code-block-border-color: #93a1a1 !default;
+
+/*-- scss:rules --*/
+
+html * {
+  color-profile: sRGB;
+  rendering-intent: auto;
+}
