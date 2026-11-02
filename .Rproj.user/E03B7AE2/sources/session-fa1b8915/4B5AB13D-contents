@@ -1,0 +1,192 @@
+---
+title: "Pesquisa Nacional por Amostra de Domicílios Contínua (PNADC)"
+subtitle: "<span style='font-size:2em;'> Introdução </span>"
+author: "Thiago Cordeiro Almeida"
+institute: "Doutorando, Centre d'Estudis Demogràfics (CED, Espanha) <br> Pesquisador Assistente, Cebrap <br>"
+date: today
+date-format: long
+footer: "cebrap.lab - PNADC"
+logo: "images/cebrap-imagem.png"
+code-link: true
+format:
+  revealjs:
+    theme: template/cebrap2025.scss
+    math: mathjax
+    # scrollable: true
+    # standalone: true
+    # embed-resources: true
+    chalkboard: true
+    transition: fade
+    background-transition: fade
+    highlight-style: ayu-mirage
+    slide-number: "c"
+    controls-layout: bottom-right
+    fig-cap-location: top
+    # fig-format: svg
+    pdf-separate-fragments: false
+    auto-stretch: true
+    
+    # fig-align: center
+editor: visual
+execute:
+  freeze: auto
+  echo: true
+---
+
+# Sejam bem-vinds! {.theme-first}
+
+## Estrutura do curso {.theme-next}
+
+:::::: columns
+::: {.column width="30%"}
+Forma de organização em termos dos dias:
+:::
+
+:::: {.column width="70%"}
+::: {style="text-align: left;"}
+**Dia 1** - Segunda, 09 de novembro - Síncrono
+
+**Dia 2** - Terça, 10 de novembro - Síncrono
+
+**Dia 3** - Quarta, 11 de novembro - Assíncrono
+
+**Dia 4** - Quinta, 12 de novembro - Síncrono
+
+**Dia 5** - Sexta, 13 de novembro - Assíncrono (e opcional)
+:::
+::::
+::::::
+
+## Dia 1, Segunda {.theme-subtopic .smaller}
+
+### Conceitos e aplicações da Pesquisa Nacional por Amostra de Domicílios Contínua
+
+::: incremental
+- Introdução à PNADC
+
+- Operacionalização da coleta
+
+- Esquema e estratégias de divulgação
+:::
+
+## Dia 2, Terça {.theme-subtopic .smaller}
+
+### Noções de R e trabalho com a PNADC no R (importação, exportação e manipulação de dados)
+
+::: incremental
+- Ciclo de análise de dados (ou pesquisa) e como o R se insere nele
+
+- Breve introdução ao R e Rstudio
+
+- Conceitos básicos e visão geral em R
+
+- Trabalhando com dados de pesquisa amostral complexa: peso amostral, intervalo de confiança, erro padrão, média e coeficiente de variação.
+
+- PNADC no R: importação dos dados e primeiras análises
+:::
+
+## Dia 3, Quarta {.theme-subtopic .smaller}
+
+### Exercício prático e notas sobre validação das estimativas obtidas com PNADC
+
+::: incremental
+- Exercício prático sobre importação e análise dos dados em R
+
+- Leituras
+
+  - Validação das estimativas obtidas com PNADC
+:::
+
+## Dia 4, Quinta {.theme-subtopic .smaller}
+
+### Cálculo de diferentes medidas em R, gráficos, exportação, trabalho em R e tópicos complementares
+
+::: incremental
+- Medidas em R
+
+- Atividade prática em R
+
+- Tópicos complementares (vamos discutir ao final da primeira aula)
+
+- Próximos passos com PNADC e R
+:::
+
+## Dia 5, Sexta {.theme-subtopic .smaller}
+
+### Exercício prático
+
+::: incremental
+- Tópicos complementares/suplementos ou outras abordagens
+:::
+
+# Questões operacionais {.theme-first}
+
+## Organização do material {.theme-next}
+
+::::::: columns
+::: {.column width="30%"}
+Para cada dia de aula, vocês encontrarão a seguinte organização:
+:::
+
+::::: {.column width="70%"}
+::: fragment
+Arquivos complementares
+
+Materiais de leitura
+
+Prática
+
+Slide
+:::
+
+::: fragment
+**Confiram sempre os materiais de cada dia**, eles serão atualizados à medida que o curso acontecer!
+:::
+:::::
+:::::::
+
+## Regras do curso {.theme-next .smaller}
+
+::: incremental
+1.  Aulas síncronas com duração de 3 horas, com *uma pausa* durante;
+
+2.  Aulas não podem ser gravadas, são diretrizes do `cebrap.lab`;
+
+3.  Há uma planilha de confirmação de presença a ser preenchida **em cada aula síncrona**;
+
+4.  Nos dias de aula assíncrona, fiquem à vontade para fazer contato via e-mail;
+
+5.  Nos dias de aula síncrona também fiquem à vontade para fazer contato :);
+
+6.  Certificados serão enviados em até 2 semanas após a finalização das aulas.
+:::
+
+# Quebrando o gelo! {.theme-stop .smaller}
+
+:::::: columns
+::: {.column width="40%"}
+Bate bola, jogo rápido!
+
+- Quem é você?
+
+- Você já usou a PNAD ou outra base amostral do IBGE?
+
+- O que te trouxe até esse curso?
+
+- Já fez algum outro curso da trilha quanti do `cebrap.lab`? Qual?
+
+- Qual a afinidade com R?
+:::
+
+:::: {.column width="60%"}
+::: {style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;"}
+<img src="images/ice.gif" style="border-radius: 50%; border:5px solid #708d81; width:450px; height:auto;"/>
+:::
+::::
+::::::
+
+# Vamos lá! {.cebrap-fim}
+
+Dúvidas?
+
+Comentários?
