@@ -205,15 +205,15 @@ Periodicidade da divulgação
 :::
 
 ::: {.column width="30%"}
-Ela nos permite:
+A PNADC permite:
 
-- Acompanhar o mesmo domicílio ao longo de 5 trimestres/visitas
+- Acompanhar o mesmo domicílio ao longo de 5 trimestres/visitas;
 
-- Garante uma maior precisão das suas estimativas
+- Garante uma maior precisão das suas estimativas;
 
-- Permite uma maior desagregação espacial das informações
+- Maior desagregação espacial das informações;
 
-- Incorporação de novos temas em uma mesma base
+- Incorporação de novos temas em uma mesma base de dados.
 :::
 :::::
 
@@ -237,6 +237,16 @@ Um fragmento, parte, subconjunto da população estudada. É definida, em geral,
 
 ![](images/pop-amostra.png){.absolute .r-stretch bottom="20" right="50" width="500" height="300"}
 
+## População e amostra na PNADC {.theme-subtopic .smaller}
+
+### População
+
+Todo o conjunto de domicílios particulares e permanentes ocupados (DPPO) mapeados no Brasil com base no Censo Demográfico mais recente.
+
+### Amostra
+
+Um fragmento, parte, subconjunto desses domicílios.
+
 ## [Unidade de coleta e divulgação]{.theme-subtopic} {.smaller}
 
 <br>
@@ -256,6 +266,37 @@ Um fragmento, parte, subconjunto da população estudada. É definida, em geral,
 - Os dados são divulgados (apresentados quando os importamos) na unidade da pessoa.
 :::
 :::::
+
+## [Unidade de coleta e divulgação]{.theme-subtopic} {.smaller}
+
+<br>
+
+::::: columns
+:::: {.column width="30%"}
+![](images/unidade_coleta.png){fig-align="center" width="80%" height="90%"}
+::::
+
+:::: {.column width="70%"}
+::: nonincremental
+- A amostra é calculada com base nos domicílios do Brasil.
+
+- Visita-se estes domicílios selecionados na amostra e, para cada um deles, preenche-se as informações em um tablet.
+
+- É coletada informações tanto a nível do domicílio, quanto a nível das pessoas (moradores).
+
+- Os dados são divulgados (apresentados quando os importamos) na unidade da pessoa.
+
+Ou seja,
+
+- População e amostra: a nível de domicílio
+
+- Análises possíveis de serem feitas: domicílio e pessoas[^analise].
+:::
+
+::::
+:::::
+
+[^analise]: Cada unidade de análise exige cuidados metodológicos específicos. podemos falar disso na aula 4.
 
 ## [Como é construída a amostra?]{.theme-subtopic} {.smaller}
 
@@ -306,7 +347,7 @@ O que há de novo?
 
 - Redefinição da estratificação para criação das UPAs[^3]
 
-- **Isso entra em vigor a partir de 2025**, finalizando a transição no terceiro trimestre de 2026.
+- **Isso entrou em vigor a partir de 2025**, finalizando a transição no terceiro trimestre de 2026.
 :::
 ::::::
 
@@ -348,11 +389,13 @@ Seleção dos domicílios
 :::
 :::::
 
-[^4]: As **FCUs** também foi uma alteração fruto da mudança recente da AM.
+[^4]: As **FCUs** também foi uma alteração fruto da mudança recente da última Amostra Mestra.
 
 ## [Estagio 2: Seleção dos domicílios]{.theme-subtopic}
 
-Em cada UPA, é selecionado aleatoriamente um conjunto de domicílios a serem entrevistados com base no CNEFE.
+Em cada UPA, é selecionado aleatoriamente um conjunto de domicílios a serem entrevistados com base no CNEFE[^cnefe].
+
+[^cnefe]: Cadastro Nacional de Endereços para Fins Estatísticos.
 
 ## [Estagio 2: Seleção dos domicílios]{.theme-subtopic} {.smaller}
 
@@ -402,7 +445,7 @@ Planejamento da coleta
 
 [^6]: Exceto para dados mensais que são divulgados ao longo do mês seguinte, mas ainda de forma experimental.
 
-O esquema
+O esquema **1-2(5)**:
 
 - **1**: Uma visita em um mês;
 
