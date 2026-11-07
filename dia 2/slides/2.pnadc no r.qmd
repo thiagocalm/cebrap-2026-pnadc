@@ -44,13 +44,9 @@ lista de presença!
 # Antes de começar (2)...
 
 ::: nonincremental
--   Dúvidas gerais sobre a aula anterior?
+- Dúvidas gerais sobre a aula anterior?
 
--   Sobre sala de sigilo do IBGE: há somente para Censo Agrop. e Empresas
-
--   Sobre as FCUs nos estratos da AM: não garantirá que possamos gearar estimativas para este subgrupo
-
--   Exercício da aula anterior: dúvidas, comentários, considerações?
+- Exercício da aula anterior: dúvidas, comentários, considerações?
 
 ![](images/question.gif){.absolute bottom="-150" right="0" width="200" height="200"}
 :::
@@ -64,13 +60,13 @@ Tópicos que vamos cobrir hoje são:
 
 :::: {.column width="70%"}
 ::: {style="text-align: left;"}
--   Ciclos de análise de dados (e pesquisa)
+- Ciclos de análise de dados (e pesquisa)
 
--   (Breve) Introdução ao R e RStudio
+- (Breve) Introdução ao R e RStudio
 
--   Trabalhando com dados de pesquisa amostral complexa
+- Trabalhando com dados de pesquisa amostral complexa
 
--   PNADC no R
+- PNADC no R
 :::
 ::::
 ::::::
@@ -122,21 +118,21 @@ Os softwares
 ::: nonincremental
 Sobre a linguagem R
 
--   Criada em 1995
+- Criada em 1995
 
--   É uma linguagem de programação open source muldialmente conhecida e utilizada
+- É uma linguagem de programação open source muldialmente conhecida e utilizada
 
--   Por ser mundialmente conhecida e utilizada... há uma grande comunidade de usuários que contribuem para a sua melhoria
+- Por ser mundialmente conhecida e utilizada... há uma grande comunidade de usuários que contribuem para a sua melhoria
 
--   Principais funções do R
+- Principais funções do R
 
-    -   Manipulação de dados
+  - Manipulação de dados
 
-    -   Ferramentas estatísticas
+  - Ferramentas estatísticas
 
-    -   Produção de gráficos de alta qualidade
+  - Produção de gráficos de alta qualidade
 
-    -   Georreferenciamento
+  - Georreferenciamento
 :::
 ::::
 
@@ -152,15 +148,15 @@ Sobre a linguagem R
 ::: nonincremental
 Motivações para aprender (e se aprofundar):
 
--   **Independência** de outros programas pagos
+- **Independência** de outros programas pagos
 
--   Imensa potencialidade das **analises** possíveis de serem feitas
+- Imensa potencialidade das **analises** possíveis de serem feitas
 
--   Capacidade de trabalhar com análises **QUANTI e QUALI** em um único software
+- Capacidade de trabalhar com análises **QUANTI e QUALI** em um único software
 
--   Capacidade de desenvolver/implementar seus **próprios algorítmos**
+- Capacidade de desenvolver/implementar seus **próprios algorítmos**
 
--   Elevadíssima **empregabilidade**
+- Elevadíssima **empregabilidade**
 :::
 ::::
 
@@ -176,21 +172,21 @@ Motivações para aprender (e se aprofundar):
 ::: nonincremental
 Sobre a IDE
 
--   É um IDE (Integrated Development Environment) criada para o R;
+- É um IDE (Integrated Development Environment) criada para o R;
 
--   É um ambiente mais amigável de se trabalhar do que no R;
+- É um ambiente mais amigável de se trabalhar do que no R;
 
--   Facilita e potencializa a programação em uma determinada linguagem
+- Facilita e potencializa a programação em uma determinada linguagem
 
--   RStudio não é a única IDE do R, há outras que podem ser vistas e usadas por aí:
+- RStudio não é a única IDE do R, há outras que podem ser vistas e usadas por aí:
 
-    -   VSCODE
+  - VSCODE
 
-    -   PyCharm
+  - PyCharm
 
-    -   Eclipse
+  - Eclipse
 
-    -   ...
+  - ...
 :::
 ::::
 
@@ -209,65 +205,65 @@ Conceitos básicos para a PNADC
 
 Objetos de armazenamento no R
 
--   **Objeto:** é um “nome” que damos para guardar algum valor ou atributo.
+- **Objeto:** é um “nome” que damos para guardar algum valor ou atributo.
 
-    -   Usamos `<-` ou `=` para atribuir algum valor a um nome.
+  - Usamos `<-` ou `=` para atribuir algum valor a um nome.
 
--   **Vetor:** é um conjunto de valores de *mesma classe* atribuídos a um objeto.
+- **Vetor:** é um conjunto de valores de *mesma classe* atribuídos a um objeto.
 
-    -   Usamos, em geral, a função `c()` para concatenar os valores no objeto.
+  - Usamos, em geral, a função `c()` para concatenar os valores no objeto.
 
--   **Dataframes:** são objetos que guardam nossos dados. Possuem linhas e colunas.
+- **Dataframes:** são objetos que guardam nossos dados. Possuem linhas e colunas.
 
-    -   Todos os seus elementos (colunas) têm que ter o mesmo número de linhas
+  - Todos os seus elementos (colunas) têm que ter o mesmo número de linhas
 
-    -   Todos os seus elementos (colunas) precisam ser nomeados.
+  - Todos os seus elementos (colunas) precisam ser nomeados.
 
-    -   Têm duas dimensões.
+  - Têm duas dimensões.
 
--   **Listas:** é uma generalização dos datataframes e vetores. Permite agregar diferentes classes de objetos dentro dela.
+- **Listas:** é uma generalização dos datataframes e vetores. Permite agregar diferentes classes de objetos dentro dela.
 
-    -   Todo dataframe é uma lista
+  - Todo dataframe é uma lista
 
-    -   Todo vetor é uma lista.
+  - Todo vetor é uma lista.
 
 ## [Conceitos básicos para a PNADC]{.theme-subtopic} {.smaller}
 
 Outros aspectos importantes
 
--   **Cada coluna de um dataframe é tratada como uma variável**
+- **Cada coluna de um dataframe é tratada como uma variável**
 
-    -   Cada coluna/variável deve, assim, ter somente uma classe/tipo.
+  - Cada coluna/variável deve, assim, ter somente uma classe/tipo.
 
--   **É possível armazenar uma variável em um vetor**
+- **É possível armazenar uma variável em um vetor**
 
-    -   Este vetor, por sua vez, pode ser inserido em um dataframe posteriormente.
+  - Este vetor, por sua vez, pode ser inserido em um dataframe posteriormente.
 
--   **Survey Design:** no R, é um tipo de objeto.
+- **Survey Design:** no R, é um tipo de objeto.
 
-    -   É tratado assim quando é declarado como tal.
+  - É tratado assim quando é declarado como tal.
 
-    -   Deve ser fruto de uma pesquisa amostral cujo o seu uso exige que se estabeleça ponderações previamente determinadas.
+  - Deve ser fruto de uma pesquisa amostral cujo o seu uso exige que se estabeleça ponderações previamente determinadas.
 
-    -   Para tanto, é importante que se conheça a documentação da pesquisa a ser utilizada
+  - Para tanto, é importante que se conheça a documentação da pesquisa a ser utilizada
 
 ## [Conceitos básicos para a PNADC]{.theme-subtopic} {.smaller}
 
 O R é uma linguagem de programação muito próximo da forma “falada”.
 
--   **Comandos**
+- **Comandos**
 
-    -   Nós usamos “verbos” (comandos/funções) para indicar as ações que queremos conduzir no R.
+  - Nós usamos “verbos” (comandos/funções) para indicar as ações que queremos conduzir no R.
 
--   **Comandos básicos do R (R base)**
+- **Comandos básicos do R (R base)**
 
-    -   São comandos que estão na raiz do programa, eles vêm junto com a sua instalação.
+  - São comandos que estão na raiz do programa, eles vêm junto com a sua instalação.
 
--   **Pacotes**
+- **Pacotes**
 
-    -   São conjuntos de comandos (funções) que baixamos em nossa máquina e executamos para obter processamentos específicos.
+  - São conjuntos de comandos (funções) que baixamos em nossa máquina e executamos para obter processamentos específicos.
 
-    -   Um pacote pode contar uma série de funções/comandos.
+  - Um pacote pode contar uma série de funções/comandos.
 
 ## [Visão geral de como funciona o RStudio]{.theme-subtopic} {.smaller}
 
@@ -301,15 +297,15 @@ Onde buscar?
 ::: {.column width="50%"}
 ### Google
 
--   Por haver uma grande comunidade de usuários do R, há uma grande produção de conteúdos.
+- Por haver uma grande comunidade de usuários do R, há uma grande produção de conteúdos.
 
--   O Google é uma ferramenta de busca capaz de selecionar alguns conteúdos associados à sua busca[^3].
+- O Google é uma ferramenta de busca capaz de selecionar alguns conteúdos associados à sua busca[^3].
 :::
 
 ::: {.column width="50%"}
 ### Stack Overflow
 
--   É um site de pergunta e resposta muito utilizado em outros países. É fortemente alimentado por usuários de linguagem de programação (inclusive R!!!)[^4].
+- É um site de pergunta e resposta muito utilizado em outros países. É fortemente alimentado por usuários de linguagem de programação (inclusive R!!!)[^4].
 :::
 :::::
 
@@ -325,9 +321,9 @@ Onde buscar?
 ::: {.column width="30%"}
 ### IA's
 
--   Enquanto uma ferramenta de IA, auxilia na compreensão de problemas de programação ou para oferecer alternativas não imaginadas.
+- Enquanto uma ferramenta de IA, auxilia na compreensão de problemas de programação ou para oferecer alternativas não imaginadas.
 
--   Usemos com cautela...
+- Usemos com cautela...
 :::
 
 ::: {.column width="70%"}
@@ -343,9 +339,9 @@ Onde buscar?
 ::: {.column width="30%"}
 ### IA's
 
--   Enquanto uma ferramenta de IA, auxilia na compreensão de problemas de programação ou para oferecer alternativas não imaginadas.
+- Enquanto uma ferramenta de IA, auxilia na compreensão de problemas de programação ou para oferecer alternativas não imaginadas.
 
--   Usemos com cautela...
+- Usemos com cautela...
 :::
 
 ::: {.column width="70%"}
@@ -394,19 +390,19 @@ Pesos amostrais
 
 ## [Peso amostral]{.theme-subtopic} {.smaller}
 
-É uma variável (ou um conjunto delas) que ajusta, pondera e expande os resultados de uma determinada amostra.
+É uma variável (ou um conjunto delas) que ajusta, pondera e expande os resultados de uma determinada amostra para a população.
 
 Algumas observações sobre os pesos:
 
--   Garantem a representatividade dos dados que estamos trabalhando para a unidade de análise.
+- Garantem a representatividade dos dados que estamos trabalhando para a população em análise.
 
--   Realizar análises com a PNADC sem declarar/aplicar seus pesos incorre em um grave erro e pode gerar estimativas viesadas[^5].
+- Realizar análises com a PNADC sem declarar/aplicar seus pesos incorre em um grave erro e pode gerar estimativas viesadas[^5].
 
--   Há pacotes que otimizam nossa análise por não precisarmos de declarar os pesos ou precisarmos de declarar somente uma vez:
+- Há pacotes que otimizam nossa análise por não precisarmos de declarar os pesos ou precisarmos de declarar somente uma vez:
 
-    -   `{PNADcIBGE}`
+  - `{PNADcIBGE}`
 
-    -   {`survey`}
+  - {`survey`}
 
 [^5]: **Importância do SIDRA:** é exatamente para atenuar erros no cálculo de nossas estimativas que usamos o SIDRA para validar o modo como estamos declarando o peso.
 
@@ -417,9 +413,9 @@ Algumas observações sobre os pesos:
 ::: nonincremental
 Os pesos nos dizem sobre:
 
--   Precisão da estimativa
+- Precisão da estimativa
 
--   Incerteza da estimativa
+- Incerteza da estimativa
 :::
 ::::
 
@@ -435,11 +431,11 @@ Os pesos nos dizem sobre:
 ::: nonincremental
 Quando se aplica os pesos:
 
--   Estamos ponderando cada observação da nossa **amostra** pela sua importância relativa na população.
+- Estamos ponderando cada observação da nossa **amostra** pela sua importância relativa na população.
 
--   **Amostra PNADC:** Domicílios em que informações foram coletadas na pesquisa.
+- **Amostra PNADC:** Domicílios em que informações foram coletadas na pesquisa.
 
--   **População PNADC:** Recenseamento brasileiro de domicílios.
+- **População PNADC:** Recenseamento brasileiro de domicílios.
 :::
 ::::
 
@@ -455,15 +451,15 @@ Quando se aplica os pesos:
 ::: nonincremental
 Atenção!
 
--   A PNADC é uma pesquisa que tem como unidade de amostragem os **domicílios**
+- A PNADC é uma pesquisa que tem como unidade de amostragem os **domicílios**
 
--   Seus pesos são os mesmos para todos os indivíduos de um determinado domicílio.
+- Seus pesos são os mesmos para todos os indivíduos de um determinado domicílio.
 
--   Quando expandidos, vão acompanhar determinadas características da população:
+- Quando expandidos, vão acompanhar determinadas características da população:
 
-    -   Para Brasil e UFs: total, idade e sexo
+  - Para Brasil e UFs: total, idade e sexo
 
-    -   Para demais níveis geográficos: total
+  - Para demais níveis geográficos: total
 :::
 ::::
 
@@ -476,14 +472,16 @@ Atenção!
 ::: nonincremental
 Nossa unidade de coleta é cada **domicílio**, mas coletamos dados também das **pessoas** (moradores).
 
-Peso de cada domicílio e pessoa
+Peso de cada domicílio e pessoa:
 
--   **Domicílio:** recebe um peso relativo ao extrato ao qual ele se encontra.
+- **Domicílio:** recebe um peso relativo ao extrato ao qual ele se encontra.
 
-    -   Compreender o modo como a Amostra Mestre é construída é importante por isso!
+  - Compreender o modo como a Amostra Mestre é construída é importante por isso!
 
--   **Pessoa:** todas de um domicílio recebem o mesmo peso[^6].
+- **Pessoa:** todas de um domicílio recebem o mesmo peso[^6].
 :::
+
+Quando expandimos a amostra, temos (i) representatividade do número de domicílios para a respectiva unidade; e (ii) representativa da população para a mesma unidade.
 
 [^6]: **Peso do domicílio:** embora todas as pessoas do domicílio recebam o mesmo peso, para análises domiciliares, devemos escolher somente uma unidade para representar o domicílio.
 
@@ -492,19 +490,19 @@ Peso de cada domicílio e pessoa
 ::: nonincremental
 Chave de identificação de cada pessoa e domicílio:
 
--   **Domicílio**: $$UPA + V1008 + V1014$$
+- **Domicílio**: $$UPA + V1008 + V1014$$
 
--   **Pessoa**: $$UPA + V1008 + V1014 + V2003 = Domicílio + V2003$$
+- **Pessoa**: $$UPA + V1008 + V1014 + V2003 = Domicílio + V2003$$
 
 Em que:
 
--   $UPA$: Unidade Primária de Amostragem
+- $UPA$: Unidade Primária de Amostragem
 
--   $V1008$: Número de Seleção de Domicílios
+- $V1008$: Número de Seleção de Domicílios
 
--   $V1014$: Número do painel
+- $V1014$: Número do painel
 
--   $V2003$: Número de ordem da pessoa no domicílio
+- $V2003$: Número de ordem da pessoa no domicílio
 :::
 
 # Trabalhando com dados de pesquisa amostral complexa {.theme-first}
@@ -519,13 +517,13 @@ Sinaliza para tendências gerais (médias) de determinada distribuição.
 
 As medidas de tendência central são bastante utilizadas para sintetizar/resumir os possíveis/prováveis valores a serem encontrados em uma distribuição.
 
--   **Média:** é a principal das medidas de tendência central
+- **Média:** é a principal das medidas de tendência central
 
--   Ela nos diz que, a depender da distribuição de nossos valores, em geral, temos grande chance de obtermos, aleatoriamente, um valor que se aproxime do **valor médio**.
+- Ela nos diz que, a depender da distribuição de nossos valores, em geral, temos grande chance de obtermos, aleatoriamente, um valor que se aproxime do **valor médio**.
 
--   Por termos uma amostra aleatória e representativa para as unidades geográficas que estudamos, podemos dizer que os valores médios de nossos indicadores representam aqueles valores mais esperados de serem encontrados para a unidade de análise.
+- Por termos uma amostra aleatória e representativa para as unidades geográficas que estudamos, podemos dizer que os valores médios de nossos indicadores representam aqueles valores mais esperados de serem encontrados para a unidade de análise.
 
--   **Uma estimativa é também um valor médio (!)**
+- **Uma estimativa é também um valor médio (!)**
 
 ## [Medidas]{.theme-subtopic} {.smaller}
 
@@ -534,13 +532,13 @@ As medidas de tendência central são bastante utilizadas para sintetizar/resumi
 ::: nonincremental
 Alguns tipos de medidas:
 
--   Números absolutos
+- Números absolutos
 
--   Proporção
+- Proporção
 
--   Razão
+- Razão
 
--   Média/moda/mediana/...
+- Média/moda/mediana/...
 :::
 ::::
 
@@ -562,9 +560,9 @@ Há algumas formas de avaliarmos a qualidade das estimativas através de medidas
 ::: nonincremental
 **Intervalo de Confiança**
 
--   Diz respeito à confiabilidade das estimativas produzidas.
+- Diz respeito à confiabilidade das estimativas produzidas.
 
--   Os limites dizem qual é a faixa dentro da qual os resultados podem variar, caso o estudo seja repetido N vezes.
+- Os limites dizem qual é a faixa dentro da qual os resultados podem variar, caso o estudo seja repetido N vezes.
 :::
 ::::
 
@@ -572,16 +570,16 @@ Há algumas formas de avaliarmos a qualidade das estimativas através de medidas
 ::: nonincremental
 **Coeficiente de Variação (CV) ou Desvio Padrão Relativo (DPR)**[^7]
 
--   É um indicador de medida relativa de previsão.
+- É um indicador de medida relativa da precisão.
 
--   Calculado como Razão entre erro padrão e a média (valor estimado do indicador).
+- Calculado como Razão entre erro padrão e a média (valor estimado do indicador).
 
--   Em geral, é multiplicado por 100.
+- Em geral, é multiplicado por 100.
 :::
 ::::
 :::::::
 
-[^7]: Referência IBGE: Quadro de referência para avaliação de estimativas, utilizado pelo IBGE, está disponível na pasta do curso.
+[^7]: **Referência IBGE:** Quadro de referência para avaliação de estimativas, utilizado pelo IBGE, está disponível na pasta do curso.
 
 ## [Técnicas de avaliação da qualidade da estimativa]{.theme-subtopic} {.smaller}
 
@@ -592,9 +590,9 @@ Há algumas formas de avaliarmos a qualidade das estimativas através de medidas
 ::: nonincremental
 **Intervalo de Confiança**
 
--   Diz respeito à confiabilidade das estimativas produzidas.
+- Diz respeito à confiabilidade das estimativas produzidas.
 
--   Os limites dizem qual é a faixa dentro da qual os resultados podem variar, caso o estudo seja repetido N vezes.
+- Os limites dizem qual é a faixa dentro da qual os resultados podem variar, caso o estudo seja repetido N vezes.
 :::
 ::::
 
@@ -608,6 +606,28 @@ Há algumas formas de avaliarmos a qualidade das estimativas através de medidas
 :::::::
 
 [^8]: Referência IBGE: Quadro de referência para avaliação de estimativas, utilizado pelo IBGE, está disponível na pasta do curso.
+
+## [Técnicas de avaliação da qualidade da estimativa]{.theme-subtopic} {.smaller}
+
+Como podemos usar cada uma das medidas?
+
+::: nonincremental
+
+**Intervalo de Confiança**
+
+- Quando estamos comparando grupos.
+
+- Em alguns casos é reportado junto com a estimativa: $estimativa \space [CI\_baixo;CI\_alto]$.
+
+- Quanto mais desagregarmos nossas análises para características da pop. ou recorte geográfico, maior será o IC.
+
+**Coeficiente de Variação (CV) ou Desvio Padrão Relativo (DPR)**
+
+- Para todas as estimativas.
+
+- Nem sempre é reportado, mas é uma boa prática calcular quando se tem as estimativas finalísticas de determinados indicadores.
+
+:::
 
 # PNADC no R {.theme-first}
 
@@ -633,15 +653,15 @@ Na aula anterior, aprendemos como acessar os microdados no site do IBGE...
 ::: nonincremental
 Alguns materiais complementares (também conhecidos como documentação) são importantes de serem acessados sempre que houver dúvida na pesquisa:
 
--   **Questionário:** onde há a descrição das variáveis existentes
+- **Questionário:** onde há a descrição das variáveis existentes
 
--   **Notas Técnicas:** onde se descreve mudanças metodológicas ocorridas ou erros identificados.
+- **Notas Técnicas:** onde se descreve mudanças metodológicas ocorridas ou erros identificados.
 
--   **Metodologia:** onde está descrito estratégias tomadas para criação da pesquisa.
+- **Metodologia:** onde está descrito estratégias tomadas para criação da pesquisa.
 
--   **Dicionário de variáveis:** é onde se encontra o código da variável, descrição de valores possíveis e tamanho da variável.
+- **Dicionário de variáveis:** é onde se encontra o código da variável, descrição de valores possíveis e tamanho da variável.
 
--   **Inputs:** é um arquivo organizado de modo a facilitar a importação dos dados.
+- **Inputs:** é um arquivo organizado de modo a facilitar a importação dos dados.
 :::
 ::::
 :::::::
@@ -650,34 +670,34 @@ Alguns materiais complementares (também conhecidos como documentação) são im
 
 Principais pacotes para facilitar a análise e modelagem dos microdados da PNAD Contínua em R:
 
--   `{PNADcIBGE}`: permite baixar e preparar os microdados da PNAD Contínua para análise.
+- `{PNADcIBGE}`: permite baixar e preparar os microdados da PNAD Contínua para análise.
 
--   `{survey}`: pacote que permite análise e modelagem de dados provenientes de pesquisas com amostras complexas, em geral.
+- `{survey}`: pacote que permite análise e modelagem de dados provenientes de pesquisas com amostras complexas, em geral.
 
 ## [Pacotes para análise dos dados da PNADC em R]{.theme-subtopic} {.smaller}
 
 ::: nonincremental
 Primeiro, instalamos os pacotes em R[^9]...
 
--   PNADcIBGE: `install.packages("survey")`
+- PNADcIBGE: `install.packages("survey")`
 
--   survey: `install.packages("survey")`
+- survey: `install.packages("survey")`
 :::
 
-[^9]: **Carregamento de pacotes:** Pacotes devem ser carregados todas as vezes que iniciamos uma sessão do R.
+[^9]: **Instalação de pacotes:** Pacotes devem ser instalados somente uma vez em cada computador.
 
 ## [Pacotes para análise dos dados da PNADC em R]{.theme-subtopic} {.smaller}
 
 ::: nonincremental
 Depois, carregamos os pacotes de interesse[^10]...
 
--   PNADcIBGE:
+- PNADcIBGE:
 
 ```{r}
 library(PNADcIBGE)
 ```
 
--   survey:
+- survey:
 
 ```{r}
 library(survey)
@@ -762,11 +782,11 @@ Baixar a Pnad trimestral do 1º, 2º, 3º e 4º trimestre de 2021.
 
 1.  Qual é o número de empregados com carteira assinada em cada um dos trimestres (VD4009)?
 
--   Faça um gráfico de linha no Excel (ou R) do 1º ao 4º trimestre com o retrato dessa variável em cada um dos trimestres.
+- Faça um gráfico de linha no Excel (ou R) do 1º ao 4º trimestre com o retrato dessa variável em cada um dos trimestres.
 
 2.  Qual a condição de ocupação na semana de referência para pessoas de 14 anos ou mais de idade em cada um dos 4 trimestres? (VD4002)
 
--   Faça um gráfico de linha no Excel (ou R) do 1º ao 4º trimestre com o retrato dessa variável em cada um dos trimestres.
+- Faça um gráfico de linha no Excel (ou R) do 1º ao 4º trimestre com o retrato dessa variável em cada um dos trimestres.
 :::
 
 ## Orientações sobre o exercício (2/2): Dica... {.theme-next .font-size-small}
