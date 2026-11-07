@@ -142,9 +142,11 @@ A **PNADC** faz parte do SIPD.
 
 - Alguns exemplos do uso:
 
-  - **POF**: usa 40% das UPAs[^2] da AM.
+  - **POF**: usa 47% das UPAs[^2] da AM.
 
-  - **PNADC**: usa 100% das UPAs da AM
+  - **PNADC**: usa 100% das UPAs da AM.
+  
+  - **PNS**: usa 55% das UPAs da AM
 
 [^2]: Falaremos disso em breve...
 
@@ -271,10 +273,10 @@ Um fragmento, parte, subconjunto desses domicílios.
 
 <br>
 
-::::: columns
-:::: {.column width="30%"}
+:::::: columns
+::: {.column width="30%"}
 ![](images/unidade_coleta.png){fig-align="center" width="80%" height="90%"}
-::::
+:::
 
 :::: {.column width="70%"}
 ::: nonincremental
@@ -290,13 +292,12 @@ Ou seja,
 
 - População e amostra: a nível de domicílio
 
-- Análises possíveis de serem feitas: domicílio e pessoas[^analise].
+- Análises possíveis de serem feitas: domicílio e pessoas[^3].
 :::
-
 ::::
-:::::
+::::::
 
-[^analise]: Cada unidade de análise exige cuidados metodológicos específicos. podemos falar disso na aula 4.
+[^3]: Cada unidade de análise exige cuidados metodológicos específicos. podemos falar disso na aula 4.
 
 ## [Como é construída a amostra?]{.theme-subtopic} {.smaller}
 
@@ -345,13 +346,13 @@ O que há de novo?
 
 - Novo critério para tamanho mínimo das UPAs: aumento do número de domicílios particulares permanentes ocupados (DPPOs) que as compõe.
 
-- Redefinição da estratificação para criação das UPAs[^3]
+- Redefinição da estratificação para criação das UPAs[^4]
 
 - **Isso entrou em vigor a partir de 2025**, finalizando a transição no terceiro trimestre de 2026.
 :::
 ::::::
 
-[^3]: Veremos daqui a pouco.
+[^4]: Veremos daqui a pouco.
 
 ## [Como é construída a amostra?]{.theme-subtopic} {.smaller}
 
@@ -379,7 +380,7 @@ Seleção dos domicílios
 
   - Renda média do responsável
 
-- Situação do domicílio: Rural - Urbano - Favelas e Comunidades Urbanas[^4].
+- Situação do domicílio: Rural - Urbano - Favelas e Comunidades Urbanas[^5].
 
 - Estrato Estatístico: Renda total das pessoas responsáveis e quantidade de Domicílios Particulares e Permanentes Ocupados (DPPOs).
 :::
@@ -389,13 +390,13 @@ Seleção dos domicílios
 :::
 :::::
 
-[^4]: As **FCUs** também foi uma alteração fruto da mudança recente da última Amostra Mestra.
+[^5]: As **FCUs** também foi uma alteração fruto da mudança recente da última Amostra Mestra.
 
 ## [Estagio 2: Seleção dos domicílios]{.theme-subtopic}
 
-Em cada UPA, é selecionado aleatoriamente um conjunto de domicílios a serem entrevistados com base no CNEFE[^cnefe].
+Em cada UPA, é selecionado aleatoriamente um conjunto de domicílios a serem entrevistados com base no CNEFE[^6].
 
-[^cnefe]: Cadastro Nacional de Endereços para Fins Estatísticos.
+[^6]: Cadastro Nacional de Endereços para Fins Estatísticos.
 
 ## [Estagio 2: Seleção dos domicílios]{.theme-subtopic} {.smaller}
 
@@ -431,19 +432,19 @@ Esquema de rotação da amostra: 1-2(5)
 
 Planejamento da coleta
 
-- Periodicidade da coleta é trimestral, ou seja, a amostra total de domicílios é coletada ao longo de 3 meses para, ao final deste ciclo, divulgar os dados[^5].
+- Periodicidade da coleta é trimestral, ou seja, a amostra total de domicílios é coletada ao longo de 3 meses para, ao final deste ciclo, divulgar os dados[^7].
 
-[^5]: Exceto para dados mensais que são divulgados ao longo do mês seguinte, mas ainda de forma experimental.
+[^7]: Exceto para dados mensais que são divulgados ao longo do mês seguinte, mas ainda de forma experimental.
 
 ## [Esquema de rotação 1-2(5)]{.theme-subtopic} {.smaller}
 
 ::: nonincremental
 Planejamento da coleta
 
-- Periodicidade da coleta é trimestral, ou seja, a amostra total de domicílios é coletada ao longo de 3 meses para, ao final deste ciclo, divulgar os dados[^6].
+- Periodicidade da coleta é trimestral, ou seja, a amostra total de domicílios é coletada ao longo de 3 meses para, ao final deste ciclo, divulgar os dados[^8].
 :::
 
-[^6]: Exceto para dados mensais que são divulgados ao longo do mês seguinte, mas ainda de forma experimental.
+[^8]: Exceto para dados mensais que são divulgados ao longo do mês seguinte, mas ainda de forma experimental.
 
 O esquema **1-2(5)**:
 
