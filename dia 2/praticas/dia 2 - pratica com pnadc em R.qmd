@@ -1,0 +1,161 @@
+---
+title: "Pesquisa Nacional por Amostra de Domicílios Contínua (PNADC)"
+subtitle: "Dia 2 - prática com pnadc em R"
+author: "Thiago Cordeiro Almeida"
+institute: "Centre d'Estudis Demogràfics (CED, Espanha) · Cebrap"
+date: today
+date-format: long
+logo: "images/cebrap-imagem.png"
+footer: "cebrap.lab - PNADC"
+
+format:
+  pdf:
+    papersize: a4
+    fontsize: 12pt
+    geometry: margin=2.5cm
+    number-sections: true
+    theme: template/cebrap2025.scss
+    math: mathjax
+    header-includes: |
+      \usepackage{fancyhdr}
+      \usepackage{graphicx}
+      \pagestyle{fancy}
+      \fancyhf{}
+      % Logo on the left of footer
+      \fancyfoot[L]{\includegraphics[height=1cm]{images/cebrap-imagem.png}}
+      % Footer text centered
+      \fancyfoot[C]{cebrap.lab - PNADC}
+      % Page number on the right
+      \fancyfoot[R]{\thepage}
+      % Remove header content
+      \renewcommand{\headrulewidth}{0pt}
+      \renewcommand{\footrulewidth}{0pt}
+      % Section numbering style
+      \renewcommand\thesection{\arabic{section}.}
+
+editor: visual
+execute:
+  freeze: auto
+  echo: true
+  warning: false
+  message: false
+---
+
+# Introdução
+
+Como comentado no slide, vamos trabalhar com dadosdo Trimestre 3 da PNADC para o ano de 2016.
+
+```{r}
+
+# ajustes gerais
+options(scipen = 9999999)
+rm(list = ls())
+
+## pacotes necessarios
+# instalando pacotes
+ifelse(!require(PNADcIBGE),install.packages("PNADcIBGE"),require(PNADcIBGE))
+ifelse(!require(survey),install.packages("survey"),require(survey))
+ifelse(!require(writexl),install.packages("writexl"),require(writexl))
+
+```
+
+# Importação dos dados
+
+Há duas formas de importação desses dados.
+
+## Diretamente do site do IBGE
+
+```{r,eval=FALSE}
+
+# Isso demoraria em torno de 4-10 min, a depender da internet
+
+pnad_2016_3t <- get_pnadc(
+  year = 2016,
+  quarter = 3,
+  design = TRUE
+)
+
+class(pnad_2016_3t) # verificando a classe do objeto criado
+
+```
+
+## Diretamente da pasta, com os dados armazenados no computador
+
+```{r}
+# 1 - Atribuindo um Working Diretory (diretorio de trabalho)
+
+setwd(file.path(here::here(),"dia 2","praticas"))
+
+# 2 - Abrindo o banco do terceiro trimestre de 2016 que baixei no site do IBGE
+pnad_2016_3t <- read_pnadc(
+  microdata = "PNADC_032016.txt",
+  input_txt = "input_PNADC_trimestral.txt"
+)
+
+# 3 - Atribuindo os labels ao banco de 2016
+pnad_2016_3t <- pnadc_labeller(
+  data_pnadc = pnad_2016_3t,
+  dictionary.file = "dicionario_PNADC_microdados_trimestral.xls"
+)
+
+# 4 - Atribuindo o plano amostral ao banco de dados
+pnad_2016_3t <- pnadc_design(pnad_2016_3t )
+```
+
+# Análises com PNADC
+
+Após a aplicação do plano amostral ao banco de dados seguindo a função `pnadc_design()`, podemos fazer análises diretamente usando o pacote `{survey}`.
+
+1.  Frequência absoluta de Tipo de vínculo do trabalho
+
+```{r}
+vinculo_16_3t <- svytotal(~VD4009,design = pnad_2016_3t, na.rm = TRUE)
+
+# Resultado da frequência
+vinculo_16_3t
+```
+
+Com base nisso, podemos avaliar a estimativa obtida. Por exemplo, através do intervalo de confiança:
+
+```{r}
+# intervalo de confiança
+confint(vinculo_16_3t)
+```
+
+Podemos também calcular o Coeficiente de Variação (CV):
+
+```{r}
+# coeficiente de variação
+cv(vinculo_16_3t)*100
+```
+
+Juntando tudo isso em um arquivo:
+
+```{r}
+# Fazendo tabela com o intervalo de confiança
+vinculo_16_3t_ic <- data.frame(
+  vinculo_16_3t,
+  confint(vinculo_16_3t),
+  cv(vinculo_16_3t)*100
+)
+
+# mudando nomes das colunas
+
+names(vinculo_16_3t_ic) <- c("N","ErroPadrao","ConfInt_2.5","ConfInt97.5","CV")
+
+# mostrar tabela com o intervalo de confiança
+vinculo_16_3t_ic
+```
+
+Com isso, podemos exportar para trabalhar em outros softwares, caso queiramos:
+
+```{r}
+# Exportacao --------------------------------------------------------------
+
+# Exportacao em csv
+write.csv2(vinculo_16_3t_ic,"vinculo.csv")
+# em excel
+vinculo_final <- data.frame(rownames(vinculo_16_3t_ic),vinculo_16_3t_ic)
+
+write_xlsx(vinculo_final, "vinculo.xlsx")
+```

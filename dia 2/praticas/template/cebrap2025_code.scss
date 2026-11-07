@@ -1,0 +1,153 @@
+/**
+ * Adapted from 'Solarized Light theme for reveal.js' to be used in cebrap.lab.
+ * Author: Achim Staebler (adatation made by Thiago Almeida)
+ *
+ * Adapted for Quarto by Posit, PBC
+ * Copyright (C) 2024 Posit, PBC
+ */
+
+// ===========================
+// Color palette & fonts
+// ===========================
+$body-font: "Times New Roman", serif;
+$heading-font: "Helvetica", sans-serif;
+$base-color: #1a1a1a;        // main text color
+$accent-color: #0055a4;      // primary accent (matches your slides)
+$highlight-color: #f4f4f4;   // code block background
+$footer-color: #666666;
+
+// ===========================
+// Body text
+// ===========================
+body {
+  font-family: $body-font;
+  font-size: 12pt;
+  color: $base-color;
+  line-height: 1.5;
+  margin: 0;
+}
+
+// ===========================
+// Headings
+// ===========================
+h1 {
+  font-family: $heading-font;
+  font-size: 18pt;
+  color: $accent-color;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  border-bottom: 1px solid $highlight-color;
+  padding-bottom: 0.25em;
+}
+
+h2 {
+  font-family: $heading-font;
+  font-size: 14pt;
+  color: $accent-color;
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid $highlight-color;
+  padding-bottom: 0.25em;
+}
+
+h3 {
+  font-family: $heading-font;
+  font-size: 12pt;
+  color: $accent-color;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+// ===========================
+// Links
+// ===========================
+a {
+  color: $accent-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// ===========================
+// Code blocks
+// ===========================
+pre, code {
+  background-color: $highlight-color;
+  border-radius: 4px;
+  padding: 4px 6px;
+  font-family: "Courier New", monospace;
+  font-size: 10pt;
+  overflow-x: auto;
+}
+
+// ===========================
+// Figures & Tables
+// ===========================
+figure {
+  margin: 1em 0;
+  figcaption {
+    font-size: 10pt;
+    text-align: center;
+    color: $base-color;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  th, td {
+    border: 1px solid #cccccc;
+    padding: 4px 8px;
+    font-size: 10pt;
+  }
+  th {
+    background-color: $highlight-color;
+    color: $base-color;
+  }
+}
+
+// ===========================
+// Section spacing
+// ===========================
+section {
+  page-break-inside: avoid;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+// ===========================
+// Footer style
+// ===========================
+footer {
+  font-size: 8pt;
+  text-align: center;
+  color: $footer-color;
+  margin-top: 1em;
+}
+
+// ===========================
+// Optional horizontal rule under headings
+// ===========================
+h1, h2 {
+  border-bottom: 1px solid $highlight-color;
+  padding-bottom: 0.25em;
+}
+
+// ===========================
+// Additional spacing for images
+// ===========================
+img {
+  display: block;
+  margin: 0.5em 0;
+  max-width: 100%;
+}
+
+// ===========================
+// Optional: code block captions
+// ===========================
+figcaption code {
+  font-size: 9pt;
+  background-color: transparent;
+  padding: 0;
+}

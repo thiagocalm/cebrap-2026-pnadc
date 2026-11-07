@@ -1,0 +1,136 @@
+---
+title: "Pesquisa Nacional por Amostra de Domicílios Contínua (PNADC)"
+subtitle: "Dia 2 - Exercício 1: trabalhadores"
+author: "Thiago Cordeiro Almeida"
+institute: "Centre d'Estudis Demogràfics (CED, Espanha) · Cebrap"
+date: today
+date-format: long
+logo: "images/cebrap-imagem.png"
+footer: "cebrap.lab - PNADC"
+
+format:
+  pdf:
+    papersize: a4
+    fontsize: 12pt
+    geometry: margin=2.5cm
+    number-sections: true
+    theme: template/cebrap2025.scss
+    math: mathjax
+    header-includes: |
+      \usepackage{fancyhdr}
+      \usepackage{graphicx}
+      \pagestyle{fancy}
+      \fancyhf{}
+      % Logo on the left of footer
+      \fancyfoot[L]{\includegraphics[height=1cm]{images/cebrap-imagem.png}}
+      % Footer text centered
+      \fancyfoot[C]{cebrap.lab - PNADC}
+      % Page number on the right
+      \fancyfoot[R]{\thepage}
+      % Remove header content
+      \renewcommand{\headrulewidth}{0pt}
+      \renewcommand{\footrulewidth}{0pt}
+      % Section numbering style
+      \renewcommand\thesection{\arabic{section}.}
+
+editor: visual
+execute:
+  freeze: auto
+  echo: true
+  warning: false
+  message: false
+---
+
+# Introdução
+
+Vamos reproduzir o exercicio utilizando os dados dos `Trabalhadores.txt`, presente na pasta de práticas desta aula.
+
+Queremos responder às seguitnes perguntas:
+
+1.  Qual a média salarial de cada trabalhador (média entre salário anterior e o salário atual)?
+
+2.  Faça uma coluna dizendo se o salário atual é “MAIOR” ou “MENOR” que o salário anterior.
+
+3.  Qual a média de idade de todos os trabalhadores?
+
+# Importação dos dados
+
+Para importar os dados, basta seguir o seguinte código
+
+```{r}
+
+# ajustes gerais
+options(scipen = 9999999)
+rm(list = ls())
+
+# Configuração do diretorio de trabalho ------------------------
+
+# configura o nosso NOVO diretório de trabalho
+setwd(file.path(here::here(),"dia 2","praticas")) 
+
+#getwd() # verificação se foi feita a mudança de diretório
+
+trabalhadores <- read.csv("Trabalhadores.txt") # importação da base de dados
+
+```
+
+# Exploratória da base de dados
+
+Vamos explorar os dados rapidamente
+
+```{r}
+head(trabalhadores) # visualizar as primeiras linhas
+tail(trabalhadores) # visualizar ultimas linhas
+str(trabalhadores) # estrutura das variaveis
+class(trabalhadores) # classe da base dados
+class(trabalhadores$Nome) # classe da variável Nome na base de dados
+class(trabalhadores$Idade) # classe da variável Idade na base de dados
+```
+
+# Questão 1 - média salarial desses trabalhadores
+
+```{r}
+# 1 - Media salarial dos trabalhadores ------------------------------------
+
+# Criando coluna para a media dos salarios
+
+trabalhadores$soma_salarios <- (
+  trabalhadores$Salario_atual + trabalhadores$Salario_anterior
+)
+
+# Criando variável para a média dos salarios
+
+trabalhadores$media_salarios <- trabalhadores$soma_salarios/2
+
+# Visualizar a media salarial dos trabalhadores
+trabalhadores$media_salarios
+```
+
+# Questão 2 - criando coluna com descrição do salário
+
+```{r}
+
+# 2 - Coluna dizendo qual salario é maior ---------------------------------
+trabalhadores$salario_categorico <- ifelse(
+  trabalhadores$Salario_atual > trabalhadores$Salario_anterior,
+  yes = "MAIOR",
+  no = "MENOR"
+
+)
+
+# Visualizar a variavel de salario categorica criada
+trabalhadores$salario_categorico
+
+table(trabalhadores$salario_categorico)
+```
+
+# Questão 3 - Média da idade de todos os trabalhadores
+
+```{r}
+
+# 3 - Qual a media de idade de todos os trabalhadores? --------------------
+
+# Calculando media de idade de todos os trabalhadores
+
+mean(trabalhadores$Idade, na.rm = T)
+```
