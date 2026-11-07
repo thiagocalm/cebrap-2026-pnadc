@@ -1,5 +1,0 @@
-Material referente ao curso de **PNAD Contínua** ofertado no âmbito do [cebrap.lab](https://cebrap.org.br/cebrap-lab/).
-
-**Sobre o curso**
-
-Este curso é voltado para pessoas que gostariam de trabalhar com a PNAD Contínua (Pesquisa Nacional por Amostra de Domicílios Contínua do IBGE) e não estão habituadas a manipular bancos de dados complexos como este. Durante as aulas, os participantes aprenderão sobre questões metodológicas da base, bem como suas nuances, limites e possibilidades de uso. O curso ensinará a acessar aquilo que se deseja na base disponibilizada pelo IBGE, levar para um software de manipulação de dados, trabalhar estatísticas básicas e avaliar as estimativas geradas. Ao final do curso, o/a participante estará mais familiarizado/a com a base de dados, bem como outras bases do IBGE com estrutura semelhante. Para participar do curso é necessário ter noções básicas dos softwares Excel, R e ter instalado o RStudio em seu computador. O curso utilizará os dois softwares para trabalhar os dados.
