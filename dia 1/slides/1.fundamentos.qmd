@@ -142,11 +142,11 @@ A **PNADC** faz parte do SIPD.
 
 - Alguns exemplos do uso:
 
-  - **POF**: usa 47% das UPAs[^2] da AM.
+  - **POF (2024-2025)**: usa 47% das UPAs[^2] da AM.
+  
+  - **PNS (2026)**: usa 55% das UPAs da AM.
 
   - **PNADC**: usa 100% das UPAs da AM.
-  
-  - **PNS**: usa 55% das UPAs da AM
 
 [^2]: Falaremos disso em breve...
 
@@ -311,49 +311,6 @@ A PNADC utiliza de uma amostragem probabilística por conglomerado em dois está
 
 Seleção das **Unidades Primárias de Amostragem (UPAs)**.
 
-# (Um breve parêntesis sobre as UPAs)
-
-## [UPA e o Censo 2022]{.theme-subtopic} {.smaller}
-
-::::: columns
-::: {.column width="30%"}
-De onde as UPAs vêm?
-
-- São calculadas com base na Amostra Mestra
-
-- São compostas por um ou mais setores censitários contíguos;
-:::
-
-::: {.column width="70%"}
-:::
-:::::
-
-## [UPA e o Censo 2022]{.theme-subtopic} {.smaller}
-
-:::::: columns
-:::: {.column width="30%"}
-::: nonincremental
-De onde as UPAs vêm?
-
-- São calculadas com base na Amostra Mestra
-
-- São compostas por um ou mais setores censitários contíguos;
-:::
-::::
-
-::: {.column width="70%"}
-O que há de novo?
-
-- Novo critério para tamanho mínimo das UPAs: aumento do número de domicílios particulares permanentes ocupados (DPPOs) que as compõe.
-
-- Redefinição da estratificação para criação das UPAs[^4]
-
-- **Isso entrou em vigor a partir de 2025**, finalizando a transição no terceiro trimestre de 2026.
-:::
-::::::
-
-[^4]: Veremos daqui a pouco.
-
 ## [Como é construída a amostra?]{.theme-subtopic} {.smaller}
 
 A PNADC utiliza de uma amostragem probabilística por conglomerado em dois estágios:
@@ -391,6 +348,47 @@ Seleção dos domicílios
 :::::
 
 [^5]: As **FCUs** também foi uma alteração fruto da mudança recente da última Amostra Mestra.
+
+# (Um breve parêntesis sobre as UPAs)
+
+## [UPA, o Censo 2022 e Novo SIPD (2025)]{.theme-subtopic} {.smaller}
+
+::::: columns
+::: {.column width="30%"}
+De onde as UPAs vêm?
+
+- São calculadas com base na Amostra Mestra
+
+- São compostas por um ou mais setores censitários contíguos;
+:::
+
+::: {.column width="70%"}
+:::
+:::::
+
+## [UPA, o Censo 2022 e Novo SIPD (2025)]{.theme-subtopic} {.smaller}
+
+:::::: columns
+:::: {.column width="30%"}
+::: nonincremental
+De onde as UPAs vêm?
+
+- São calculadas com base na Amostra Mestra
+
+- São compostas por um ou mais setores censitários contíguos;
+:::
+::::
+
+::: {.column width="70%"}
+O que há de novo no Novo SIPD?
+
+- Novo critério para tamanho mínimo das UPAs: aumento do número de domicílios particulares permanentes ocupados (DPPOs) que as compõe.
+
+- Redefinição da estratificação para criação das UPAs.
+
+- **Isso entrou em vigor a partir de 2025**, finalizando a transição no terceiro trimestre de 2026.
+:::
+::::::
 
 ## [Estagio 2: Seleção dos domicílios]{.theme-subtopic}
 
