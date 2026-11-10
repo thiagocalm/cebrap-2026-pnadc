@@ -45,7 +45,6 @@ execute:
 knitr::opts_chunk$set(error=FALSE, warning=FALSE, message=FALSE)
 ```
 
-
 # Introdução
 
 Vamos trabalhar com dados dos Trimestres da PNADC para o ano de 2021. A ideia é que trabalhemos com os acumulados dos trimestres e que façamos uma análise de conjuntura de alguns indicadores de mercado de trabalho ao longo do ano de 2021.
@@ -119,75 +118,75 @@ Esta é uma boa alternativa para poupar tempo com o download dos dados. Todavia,
 # 2.1 - Primeiro voce deve baixar os microdados, dicionario e input no site do IBGE
 
 # 2.2 - Importar a base
-
-# Trimestre 1
-P_21_t1 <- read_pnadc(
-  microdata = "PNADC_012021.txt",
-  input_txt = "input_PNADC_trimestral.txt"
-)
-
-# Trimestre 2
-P_21_t2 <- read_pnadc(
-  microdata = "PNADC_022021.txt",
-  input_txt = "input_PNADC_trimestral.txt"
-)
-
-# Trimestre 3
-P_21_t3 <- read_pnadc(
-  microdata = "PNADC_032021.txt",
-  input_txt = "input_PNADC_trimestral.txt"
-)
-
-# Trimestre 4
-P_21_t4 <- read_pnadc(
-  microdata = "PNADC_042021.txt",
-  input_txt = "input_PNADC_trimestral.txt"
-)
-
-# 2.3 - Atribuindo os labels às bases
-
-# Trimestre 1
-P_21_t1 <- pnadc_labeller(
-  data_pnadc = P_21_t1,
-  dictionary.file = "dicionario_PNADC_microdados_trimestral.xls"
-)
-
-# Trimestre 2
-P_21_t2 <- pnadc_labeller(
-  data_pnadc = P_21_t2,
-  dictionary.file = "dicionario_PNADC_microdados_trimestral.xls"
-)
-
-# Trimestre 3
-P_21_t3 <- pnadc_labeller(
-  data_pnadc = P_21_t3,
-  dictionary.file = "dicionario_PNADC_microdados_trimestral.xls"
-)
-
-# Trimestre 4
-P_21_t4 <- pnadc_labeller(
-  data_pnadc = P_21_t4,
-  dictionary.file = "dicionario_PNADC_microdados_trimestral.xls"
-)
-
-# 2.4 - Atribuindo o plano amostral
-
-# Trimestre 1
-P_21_t1 <- pnadc_design(P_21_t1)
-
-# Trimestre 2
-P_21_t2 <- pnadc_design(P_21_t2)
-
-# Trimestre 3
-P_21_t3 <- pnadc_design(P_21_t3)
-
-# Trimestre 4
-P_21_t4 <- pnadc_design(P_21_t4)
+# 
+# # Trimestre 1
+# P_21_t1 <- read_pnadc(
+#   microdata = "PNADC_012021.txt",
+#   input_txt = "input_PNADC_trimestral.txt"
+# )
+# 
+# # Trimestre 2
+# P_21_t2 <- read_pnadc(
+#   microdata = "PNADC_022021.txt",
+#   input_txt = "input_PNADC_trimestral.txt"
+# )
+# 
+# # Trimestre 3
+# P_21_t3 <- read_pnadc(
+#   microdata = "PNADC_032021.txt",
+#   input_txt = "input_PNADC_trimestral.txt"
+# )
+# 
+# # Trimestre 4
+# P_21_t4 <- read_pnadc(
+#   microdata = "PNADC_042021.txt",
+#   input_txt = "input_PNADC_trimestral.txt"
+# )
+# 
+# # 2.3 - Atribuindo os labels às bases
+# 
+# # Trimestre 1
+# P_21_t1 <- pnadc_labeller(
+#   data_pnadc = P_21_t1,
+#   dictionary.file = "dicionario_PNADC_microdados_trimestral.xls"
+# )
+# 
+# # Trimestre 2
+# P_21_t2 <- pnadc_labeller(
+#   data_pnadc = P_21_t2,
+#   dictionary.file = "dicionario_PNADC_microdados_trimestral.xls"
+# )
+# 
+# # Trimestre 3
+# P_21_t3 <- pnadc_labeller(
+#   data_pnadc = P_21_t3,
+#   dictionary.file = "dicionario_PNADC_microdados_trimestral.xls"
+# )
+# 
+# # Trimestre 4
+# P_21_t4 <- pnadc_labeller(
+#   data_pnadc = P_21_t4,
+#   dictionary.file = "dicionario_PNADC_microdados_trimestral.xls"
+# )
+# 
+# # 2.4 - Atribuindo o plano amostral
+# 
+# # Trimestre 1
+# P_21_t1 <- pnadc_design(P_21_t1)
+# 
+# # Trimestre 2
+# P_21_t2 <- pnadc_design(P_21_t2)
+# 
+# # Trimestre 3
+# P_21_t3 <- pnadc_design(P_21_t3)
+# 
+# # Trimestre 4
+# P_21_t4 <- pnadc_design(P_21_t4)
 ```
 
 # Análises com PNADC
 
-Após a aplicação do plano amostral ao banco de dados seguindo a função `pnadc_design()`, **no caso de ter utilizado os microdados já baixados e armazenados em seu computador, podemos fazer análises diretamente usando o pacote `{survey}`.
+Após a aplicação do plano amostral ao banco de dados seguindo a função `pnadc_design()`, \*\*no caso de ter utilizado os microdados já baixados e armazenados em seu computador, podemos fazer análises diretamente usando o pacote `{survey}`.
 
 1.  Numero de empregados com carteira assinada
 
@@ -219,7 +218,6 @@ write.csv2(Vinculo_t2, "Vinculo_t2.csv")
 write.csv2(Vinculo_t3, "Vinculo_t3.csv")
 write.csv2(Vinculo_t4, "Vinculo_t4.csv")
 ```
-
 
 2.  Condição de ocupação das pessoas com 14 anos ou mais
 
@@ -253,7 +251,6 @@ confint(Condicao_t2)
 confint(Condicao_t3)
 confint(Condicao_t4)
 ```
-
 
 Podemos exportar os resultados para trabalharmos em excel:
 
@@ -354,8 +351,6 @@ vinculos |>
 
 ![](graf_tipo_vinculos.png){fig-align="center" width="80%" height="50%"}
 
-
 Esse gráfico pode passar por uma série de ajustes e modificações, para ficar ainda mais do jeito que gostaríamos.
 
 Caso queira exercitar, pode copiar os códigos que utilizei para a primeira variável (tipo de vínculo) e tentar replicar o gráfico para a segunda variável (condição da ocupação).
-

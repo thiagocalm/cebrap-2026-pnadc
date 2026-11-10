@@ -481,9 +481,9 @@ Peso de cada domicílio e pessoa:
 - **Pessoa:** todas de um domicílio recebem o mesmo peso[^6].
 :::
 
-Quando expandimos a amostra, temos (i) representatividade do número de domicílios para a respectiva unidade; e (ii) representativa da população para a mesma unidade.
-
 [^6]: **Peso do domicílio:** embora todas as pessoas do domicílio recebam o mesmo peso, para análises domiciliares, devemos escolher somente uma unidade para representar o domicílio.
+
+Quando expandimos a amostra, temos (i) representatividade do número de domicílios para a respectiva unidade; e (ii) representativa da população para a mesma unidade.
 
 ## [Nível do domicílio ou dos indivíduos?]{.theme-subtopic} {.smaller}
 
@@ -612,7 +612,6 @@ Há algumas formas de avaliarmos a qualidade das estimativas através de medidas
 Como podemos usar cada uma das medidas?
 
 ::: nonincremental
-
 **Intervalo de Confiança**
 
 - Quando estamos comparando grupos.
@@ -626,7 +625,6 @@ Como podemos usar cada uma das medidas?
 - Para todas as estimativas.
 
 - Nem sempre é reportado, mas é uma boa prática calcular quando se tem as estimativas finalísticas de determinados indicadores.
-
 :::
 
 # PNADC no R {.theme-first}
