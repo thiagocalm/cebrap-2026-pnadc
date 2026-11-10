@@ -115,7 +115,6 @@ trabalhadores$salario_categorico <- ifelse(
   trabalhadores$Salario_atual > trabalhadores$Salario_anterior,
   yes = "MAIOR",
   no = "MENOR"
-
 )
 
 # Visualizar a variavel de salario categorica criada

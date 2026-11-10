@@ -2,6 +2,10 @@
 #'Roteiro trabalhos iniciais da PNADC em R
 #'----------------------------------------
 
+# ajustes gerais
+options(timeout = 1200, scipen = 99999)
+invisible(gc())
+
 # instalando os pacotes necessários
 install.packages("PNADcIBGE")
 install.packages("survey")
@@ -80,6 +84,17 @@ names(vinculo_16_3t_ic) <- c("N","ErroPadrao","ConfInt_2.5","ConfInt97.5","CV")
 
 # mostrar tabela com o intervalo de confiança
 vinculo_16_3t_ic
+
+###
+# Proporcoes
+###
+
+# Nivel de ocupação
+
+emp_16_3t <- survey::svymean(x=~VD4002, design = pnad_2016_3t, na.rm=TRUE)
+
+# resultados
+emp_16_3t
 
 # Exportacao --------------------------------------------------------------
 
