@@ -143,7 +143,7 @@ A **PNADC** faz parte do SIPD.
 - Alguns exemplos do uso:
 
   - **POF (2024-2025)**: usa 47% das UPAs[^2] da AM.
-  
+
   - **PNS (2026)**: usa 55% das UPAs da AM.
 
   - **PNADC**: usa 100% das UPAs da AM.
@@ -337,7 +337,7 @@ Seleção dos domicílios
 
   - Renda média do responsável
 
-- Situação do domicílio: Rural - Urbano - Favelas e Comunidades Urbanas[^5].
+- Situação do domicílio: Rural - Urbano - Favelas e Comunidades Urbanas[^4].
 
 - Estrato Estatístico: Renda total das pessoas responsáveis e quantidade de Domicílios Particulares e Permanentes Ocupados (DPPOs).
 :::
@@ -347,7 +347,7 @@ Seleção dos domicílios
 :::
 :::::
 
-[^5]: As **FCUs** também foi uma alteração fruto da mudança recente da última Amostra Mestra.
+[^4]: As **FCUs** também foi uma alteração fruto da mudança recente da última Amostra Mestra.
 
 # (Um breve parêntesis sobre as UPAs)
 
@@ -392,9 +392,9 @@ O que há de novo no Novo SIPD?
 
 ## [Estagio 2: Seleção dos domicílios]{.theme-subtopic}
 
-Em cada UPA, é selecionado aleatoriamente um conjunto de domicílios a serem entrevistados com base no CNEFE[^6].
+Em cada UPA, é selecionado aleatoriamente um conjunto de domicílios a serem entrevistados com base no CNEFE[^5].
 
-[^6]: Cadastro Nacional de Endereços para Fins Estatísticos.
+[^5]: Cadastro Nacional de Endereços para Fins Estatísticos.
 
 ## [Estagio 2: Seleção dos domicílios]{.theme-subtopic} {.smaller}
 
@@ -430,19 +430,19 @@ Esquema de rotação da amostra: 1-2(5)
 
 Planejamento da coleta
 
-- Periodicidade da coleta é trimestral, ou seja, a amostra total de domicílios é coletada ao longo de 3 meses para, ao final deste ciclo, divulgar os dados[^7].
+- Periodicidade da coleta é trimestral, ou seja, a amostra total de domicílios é coletada ao longo de 3 meses para, ao final deste ciclo, divulgar os dados[^6].
 
-[^7]: Exceto para dados mensais que são divulgados ao longo do mês seguinte, mas ainda de forma experimental.
+[^6]: Exceto para dados mensais que são divulgados ao longo do mês seguinte, mas ainda de forma experimental.
 
 ## [Esquema de rotação 1-2(5)]{.theme-subtopic} {.smaller}
 
 ::: nonincremental
 Planejamento da coleta
 
-- Periodicidade da coleta é trimestral, ou seja, a amostra total de domicílios é coletada ao longo de 3 meses para, ao final deste ciclo, divulgar os dados[^8].
+- Periodicidade da coleta é trimestral, ou seja, a amostra total de domicílios é coletada ao longo de 3 meses para, ao final deste ciclo, divulgar os dados[^7].
 :::
 
-[^8]: Exceto para dados mensais que são divulgados ao longo do mês seguinte, mas ainda de forma experimental.
+[^7]: Exceto para dados mensais que são divulgados ao longo do mês seguinte, mas ainda de forma experimental.
 
 O esquema **1-2(5)**:
 
