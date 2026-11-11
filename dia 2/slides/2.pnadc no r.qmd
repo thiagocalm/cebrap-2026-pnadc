@@ -677,7 +677,7 @@ Principais pacotes para facilitar a análise e modelagem dos microdados da PNAD 
 ::: nonincremental
 Primeiro, instalamos os pacotes em R[^9]...
 
-- PNADcIBGE: `install.packages("survey")`
+- PNADcIBGE: `install.packages("PNADcIBGE")`
 
 - survey: `install.packages("survey")`
 :::
@@ -702,7 +702,7 @@ library(survey)
 ```
 :::
 
-[^10]: **Instalação de pacotes:** Uma vez instalado o pacote, não é necessário fazer a sua instalação novamente.
+[^10]: **Carregamento de pacotes:** Uma vez instalado o pacote, não é necessário fazer a sua instalação novamente, mas todas as vezes que iniciar o script novamente, é necessário fazer o carregamento dos pacotes.
 
 ## [Fazendo download dos bancos de dados em R]{.theme-subtopic} {.smaller}
 

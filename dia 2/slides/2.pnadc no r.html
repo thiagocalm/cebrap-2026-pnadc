@@ -10,7 +10,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
 <meta name="author" content="Thiago Cordeiro Almeida">
-<meta name="dcterms.date" content="2026-11-10">
+<meta name="dcterms.date" content="2026-11-11">
 <title>Pesquisa Nacional por Amostra de Domicílios Contínua (PNADC)</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -214,7 +214,7 @@ Thiago Cordeiro Almeida
     </div>
 </div>
 
-  <p class="date">November 10, 2026</p>
+  <p class="date">November 11, 2026</p>
 </section><section id="antes-de-começar" class="title-slide slide level1 center"><h1>Antes de começar…</h1>
 <p>lista de presença!</p>
 <p><img data-src="images/attention.gif" class="absolute" style="bottom: 10px; right: 50px; width: 240px; height: 240px; "></p>
@@ -698,7 +698,7 @@ Thiago Cordeiro Almeida
 </ul></section><section id="pacotes-para-análise-dos-dados-da-pnadc-em-r-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Pacotes para análise dos dados da PNADC em R</span></h2>
 <p>Primeiro, instalamos os pacotes em R<sup>1</sup>…</p>
 <ul>
-<li><p>PNADcIBGE: <code>install.packages("survey")</code></p></li>
+<li><p>PNADcIBGE: <code>install.packages("PNADcIBGE")</code></p></li>
 <li><p>survey: <code>install.packages("survey")</code></p></li>
 </ul><aside><ol class="aside-footnotes"><li id="fn9"><p><strong>Instalação de pacotes:</strong> Pacotes devem ser instalados somente uma vez em cada computador.</p></li></ol></aside></section><section id="pacotes-para-análise-dos-dados-da-pnadc-em-r-2" class="slide level2 smaller"><h2><span class="theme-subtopic">Pacotes para análise dos dados da PNADC em R</span></h2>
 <p>Depois, carregamos os pacotes de interesse<sup>1</sup>…</p>
@@ -714,7 +714,7 @@ Thiago Cordeiro Almeida
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="" aria-label="1"></a><span class="fu">library</span>(survey)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn10"><p><strong>Instalação de pacotes:</strong> Uma vez instalado o pacote, não é necessário fazer a sua instalação novamente.</p></li></ol></aside></section><section id="fazendo-download-dos-bancos-de-dados-em-r" class="slide level2 smaller"><h2><span class="theme-subtopic">Fazendo download dos bancos de dados em R</span></h2>
+<aside><ol class="aside-footnotes"><li id="fn10"><p><strong>Carregamento de pacotes:</strong> Uma vez instalado o pacote, não é necessário fazer a sua instalação novamente, mas todas as vezes que iniciar o script novamente, é necessário fazer o carregamento dos pacotes.</p></li></ol></aside></section><section id="fazendo-download-dos-bancos-de-dados-em-r" class="slide level2 smaller"><h2><span class="theme-subtopic">Fazendo download dos bancos de dados em R</span></h2>
 <p><strong>1. Diretamente no R</strong>: É possível baixar diretamente no R, selecionando as variáveis desejadas e já contemplando o plano amostral<sup>1</sup>.</p>
 <p>Exemplo 1: Baixando o banco do segundo trimestre de 2023</p>
 <div class="cell">
