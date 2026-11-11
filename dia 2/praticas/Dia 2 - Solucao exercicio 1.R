@@ -7,10 +7,11 @@
 #' 2. Faça uma coluna dizendo se o salário atual é “MAIOR” ou “MENOR” que o salário anterior.
 #' 3. Qual a média de idade de todos os trabalhadores?
 
-
 # Configuração do diretorio de trabalho ------------------------
 
 getwd() # verificando onde esta o diretorio de trabalho
+
+"C://Users//DELL//OneDrive//Trampos//Cebrap//Nucleo de Desenvolvimento//cebrap.lab//2026//PnadC//cebrap-2026-pnadc//dia 2//praticas"
 
 here::here() # exemplo de como verificar onde se encontra o diretorio com pacote 'here'
 
@@ -41,10 +42,14 @@ class(trabalhadores$Nome) # classe da variável Nome na base de dados
 class(trabalhadores$Idade) # classe da variável Idade na base de dados
 
 # 1 - Media salarial dos trabalhadores ------------------------------------
+#' 1. Qual a média salarial de cada trabalhador
+#' (média entre salário anterior e o salário atual)?
+
+head(trabalhadores)
 
 # Criando coluna para a media dos salarios
 
-trabalhadores$soma_salarios <- (trabalhadores$Salario_atual + trabalhadores$Salario_anterior)
+trabalhadores$soma_salarios <- (trabalhadores$Salario_anterior + trabalhadores$Salario_atual)
 
 head(trabalhadores) # ver se a variavel foi criada
 
@@ -52,19 +57,24 @@ head(trabalhadores) # ver se a variavel foi criada
 
 trabalhadores$media_salarios <- trabalhadores$soma_salarios/2
 
+head(trabalhadores) # verificando a variavel
 class(trabalhadores$media_salarios)
 
 # Visualizar a media salarial dos trabalhadores
 trabalhadores$media_salarios
 
-head(trabalhadores) # primeiras linhas para a variavel de media de salario por trabalhador
+min(trabalhadores$media_salarios) # minimo de todas as médias
+max(trabalhadores$media_salarios) # máximo de todas as médias
 
 # 2 - Coluna dizendo qual salario é maior ---------------------------------
+#' 2. Faça uma coluna dizendo se o
+#' salário atual é “MAIOR” ou “MENOR/IGUAL” que o salário anterior.
+
 
 trabalhadores$salario_categorico <- ifelse(
   trabalhadores$Salario_atual > trabalhadores$Salario_anterior,
-  yes = "MAIOR",
-  no = "MENOR"
+  yes  = "MAIOR",
+  no   = "MENOR/IGUAL"
 )
 
 # Visualizar a variavel de salario categorica criada

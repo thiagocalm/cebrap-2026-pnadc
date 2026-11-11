@@ -3,13 +3,13 @@
 #'----------------------------------------
 
 # ajustes gerais
-options(timeout = 1200, scipen = 99999)
-invisible(gc())
+options(timeout = 1200, scipen = 9999)
+invisible(gc()) # liberar de espaco nao utilizado da memoria do computador
 
 # instalando os pacotes necessários
-install.packages("PNADcIBGE")
-install.packages("survey")
-install.packages("writexl")
+#install.packages("PNADcIBGE")
+#install.packages("survey")
+#install.packages("writexl")
 
 # carregar os pacotes necessários
 library(PNADcIBGE)
@@ -22,15 +22,14 @@ library(writexl)
 # Baixando o banco de dados trimestral do 3º trimestre de 2016
 ###
 
-# Isso demoraria em torno de 4-10 min, a depender da internet
-
+# opção 1 - baixando diretamente
 # pnad_2016_3t <- get_pnadc(
 #   year = 2016,
 #   quarter = 3,
-#   design = TRUE,
-#   vars = c("UF", "V2007","VD4009","VD4019")
+#   design = TRUE
 # )
-#
+
+# Isso demoraria em torno de 4-10 min, a depender da internet
 # class(pnad_2016_3t) # verificando a classe do objeto criado
 
 
@@ -39,14 +38,20 @@ library(writexl)
 ###
 
 # 1 - Atribuindo um Working Diretory (diretorio de trabalho)
-
+getwd()
 setwd(file.path(here::here(),"dia 2","praticas"))
+getwd() # diretorio de trabalho pronto para as analises
 
 # 2 - Abrindo o banco do terceiro trimestre de 2016 que baixei no site do IBGE
+
 pnad_2016_3t <- read_pnadc(
   microdata = "PNADC_032016.txt",
   input_txt = "input_PNADC_trimestral.txt"
 )
+
+# analisando a estrutura da base de dados
+class(pnad_2016_3t)
+head(pnad_2016_3t)
 
 # 3 - Atribuindo os labels ao banco de 2016
 pnad_2016_3t <- pnadc_labeller(
@@ -54,8 +59,12 @@ pnad_2016_3t <- pnadc_labeller(
   dictionary.file = "dicionario_PNADC_microdados_trimestral.xls"
 )
 
+# PODERIAMOS MANIPULAR A BASE DE DADOS!
+
 # 4 - Atribuindo o plano amostral ao banco de dados
+class(pnad_2016_3t)
 pnad_2016_3t <- pnadc_design(pnad_2016_3t )
+class(pnad_2016_3t) # a classe da nossa base de dados mudou!
 
 # Algumas analises diretas da PNADC ---------------------------------------
 
