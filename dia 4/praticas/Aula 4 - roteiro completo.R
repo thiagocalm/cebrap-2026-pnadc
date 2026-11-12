@@ -30,12 +30,12 @@ library(tidyverse)
 
 # baixando os dados diretamente do ibge
 
-pnad_2024_v1 <- get_pnadc(
-  year = 2024,
-  interview = 1,
-  labels = FALSE,
-  design = TRUE # ja baixar com o plano amostral implementado
-)
+# pnad_2024_v1 <- get_pnadc(
+#   year = 2024,
+#   interview = 1,
+#   labels = FALSE,
+#   design = TRUE # ja baixar com o plano amostral implementado
+# )
 
 # importando offline (lembre-se de configurar o working directory antes!!!)
 
@@ -56,7 +56,6 @@ class(pnad_2024_v1) # classe ainda é 'dataframe'
 pnad_2024_v1 <- pnadc_design(pnad_2024_v1) # aplicando o plano amostral
 
 class(pnad_2024_v1) # classe mudou para "svyrep.design"
-
 
 # Filtro para trabalhar com Pop. Ocupada ----------------------------------
 
@@ -185,7 +184,7 @@ tabela_5 <- svyby(
   na.rm = TRUE
 )
 
-tabela_5 # visualizando tabela
+arrange(tabela_5,desc(renda_isencaoPotencial_Isencao)) # visualizando tabela
 
 # Avaliando nossas estimativas principais
 
