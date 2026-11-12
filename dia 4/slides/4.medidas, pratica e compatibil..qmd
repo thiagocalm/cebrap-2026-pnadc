@@ -113,7 +113,7 @@ Na aula 2, mencionei sobre os dois pacotes que, em geral, utilizamos. Abaixo est
 :::::
 ::::::
 
-## [Outros aspectos importantes da PNADC: peso]{.theme-subtopic}
+## [Outros aspectos importantes da PNADC: peso]{.theme-subtopic} {.smaller}
 
 Variáveis de peso amostral
 
@@ -418,13 +418,13 @@ Imposto de renda zero!
 
 ## [O caso]{.theme-subtopic} {.smaller}
 
-A ideia da PL que foi para tramitação no Senado Federal de ser um passo rumo à uma política fiscal mais redistributiva.
+A ideia da [Lei 15.270, sancionada em 2025](https://www12.senado.leg.br/noticias/materias/2025/11/27/sancionada-isencao-do-imposto-de-renda-para-quem-ganha-ate-r-5-mil-por-mes) é de ser um passo a mais na garantia de uma maior justiça redistributiva no Brasil.
 
 ![](images/IRPFM_ideia.png){fig-align="center" width="100%" height="100%"}
 
 ## [O caso]{.theme-subtopic} {.font-size-small}
 
-A ideia da PL que foi para tramitação no Senado Federal de ser um passo rumo à uma política fiscal mais redistributiva.
+A ideia da [Lei 15.270, sancionada em 2025](https://www12.senado.leg.br/noticias/materias/2025/11/27/sancionada-isencao-do-imposto-de-renda-para-quem-ganha-ate-r-5-mil-por-mes) é de ser um passo a mais na garantia de uma maior justiça redistributiva no Brasil.
 
 :::::: columns
 :::: {.column width="70%"}
@@ -454,7 +454,7 @@ Qual seria a parcela dos trabalhadores de um específico estado que *potencialme
 
 ## [O caso]{.theme-subtopic} {.font-size-small}
 
-A ideia da PL que foi para tramitação no Senado Federal de ser um passo rumo à uma política fiscal mais redistributiva.
+A ideia da [Lei 15.270, sancionada em 2025](https://www12.senado.leg.br/noticias/materias/2025/11/27/sancionada-isencao-do-imposto-de-renda-para-quem-ganha-ate-r-5-mil-por-mes) é de ser um passo a mais na garantia de uma maior justiça redistributiva no Brasil.
 
 :::::: columns
 :::: {.column width="70%"}
@@ -757,7 +757,7 @@ Por que compatibilizar?
 
 Como compatibilizar?
 
-- **Pressuposto:** Estamos trabalhando com indivíduos de diferentes.
+- **Pressuposto:** Estamos trabalhando com indivíduos distintos.
 
 - **Estratégias:** Buscar unidades de análise em comum. Ex.: classes sociais (EGP, etc.), unidades geográficas, mesmo indicador, ...
 :::
@@ -777,12 +777,14 @@ Como compatibilizar?
 
 :::: {.column width="30%"}
 ::: nonincremental
-**Exemplo 1**: Avaliação da qualidade dos dados **da PNADc**:
+**Exemplo 1**: Avaliação da qualidade dos dados **da PNADc**[^ex1]:
 
 - Assume-se o Caged, registro administrativo, como fonte de referência.
 :::
 ::::
 ::::::
+
+[^ex1]: [Corseil e colegas (2022)](http://dx.doi.org/10.38116/978-65-5635-042-4/capitulo27).
 
 ## [Exemplos de compatibilização da PNADc]{.theme-subtopic} {.smaller}
 
@@ -793,7 +795,7 @@ Como compatibilizar?
 
 :::: {.column width="30%"}
 ::: nonincremental
-**Exemplo 2**: Avaliação da qualidade dos dados **de registro administrativo**:
+**Exemplo 2**: Avaliação da qualidade dos dados **de registro administrativo**[^ex2]:
 
 - Assume-se a PNADc como a fonte de referência para as estimativas.
 
@@ -801,6 +803,8 @@ Como compatibilizar?
 :::
 ::::
 ::::::
+
+[^ex2]: [Almeida e colegas (2025)](https://repositorio.ipea.gov.br/handle/11058/17266).
 
 ## [Exemplos de compatibilização da PNADc]{.theme-subtopic} {.smaller}
 
@@ -811,12 +815,14 @@ Como compatibilizar?
 
 :::: {.column width="30%"}
 ::: nonincremental
-**Exemplo 3**: Proposição de uma nova unidade de análise não contida na PNADc:
+**Exemplo 3**: Proposição de uma nova unidade de análise não contida na PNADc[^ex3]:
 
 - Assume-se que a representatividade populacional de ambas as bases são semelhantes.
 :::
 ::::
 ::::::
+
+[^ex3]: [Insper (2024)](https://repositorio.insper.edu.br/handle/11224/6478).
 
 ## [Exemplos de compatibilização da PNADc]{.theme-subtopic} {.smaller}
 
@@ -827,12 +833,14 @@ Como compatibilizar?
 
 :::: {.column width="30%"}
 ::: nonincremental
-**Exemplo 4**: Comparação da PNADc com indicadores de trabalho e renda em períodos não cobertos:
+**Exemplo 4**: Comparação da PNADc com indicadores de trabalho e renda em períodos não cobertos[^ex4]:
 
 - Assume-se que embora os níveis não sejam semelhantes, a tendência deveria ser parecida.
 :::
 ::::
 ::::::
+
+[^ex4]: [Vaz e Barreira (2022)](https://dx.doi.org/10.1590/1980-53575145botc).
 
 # Próximos passos {.theme-first}
 
