@@ -125,28 +125,25 @@ Variáveis de peso amostral
 
 ## [Outros aspectos importantes da PNADC: deflatores]{.theme-subtopic}
 
-:::nonincremental
-
+::: nonincremental
 Deflatores
 
 - Usamos os deflatores para corrigir/ajustar os valores de rendimentos obtidos em determinado período do tempo (nominais) para valores que sejam comparáveis com um outro momento no tempo (reais).
 
-- Incorporado à PNADc (via pacote PNADcIBGE), **temos os deflatores do IPCA**[^ipca].
+- Incorporado à PNADc (via pacote PNADcIBGE), **temos os deflatores do IPCA**[^1].
 :::
 
-[^ipca]: Índice Nacional de Preços ao Consumidor Amplo.
+[^1]: Índice Nacional de Preços ao Consumidor Amplo.
 
 ## [Outros aspectos importantes da PNADC]{.theme-subtopic}
 
-:::nonincremental
-
+::: nonincremental
 Como usamos no R?
 
 - **Para rendimento habitual**: usar os argumentos `get_pnadc(...,deflator=TRUE, defyear = ANO, defperiod = TRIMESTRE)`. Depois multiplicar a variável de interesse: $VAR\_INTERESSE \cdot Habitual$.
 
 - **Para rendimento efetivo**: usar os argumentos `get_pnadc(...,deflator=TRUE, defyear = ANO, defperiod = TRIMESTRE)`. Depois multiplicar a variável de interesse: $VAR\_INTERESSE \cdot Efetivo$
 :::
-
 
 # Tipos de Medida na PNADC {.theme-first}
 
@@ -158,7 +155,7 @@ Análise de dados, pesquisa e R
 
 ::::: columns
 ::: {.column width="20%"}
-Fluxo de análise de dados[^1] que, geralmente, seguimos:
+Fluxo de análise de dados[^2] que, geralmente, seguimos:
 :::
 
 ::: {.column width="80%"}
@@ -166,7 +163,7 @@ Fluxo de análise de dados[^1] que, geralmente, seguimos:
 :::
 :::::
 
-[^1]: Fonte: Curso-R. Ciência de dados em R. Ver referências da aula.
+[^2]: Fonte: Curso-R. Ciência de dados em R. Ver referências da aula.
 
 ## [Natureza das variáveis]{.theme-subtopic} {.smaller}
 
@@ -314,9 +311,9 @@ Quanti X Quanti X Quati
 
 ## Tipos de análises {.theme-subtopic .smaller}
 
-Há níveis de análises que são necessários de serem explorados na interação de fenômenos/variáveis[^2].
+Há níveis de análises que são necessários de serem explorados na interação de fenômenos/variáveis[^3].
 
-[^2]: Ver capítulo 10 do Livro "PNADC na prática", na ementa do curso.
+[^3]: Ver capítulo 10 do Livro "PNADC na prática", na ementa do curso.
 
 :::::: columns
 ::: {.column width="30%"}
@@ -723,7 +720,7 @@ Limitações
 
 ## [Compatibilização da PNADc]{.theme-subtopic} {.smaller}
 
-:::nonincremental
+::: nonincremental
 O que estamos chamando por compatibização?
 
 - Harmonização de conceitos e variáveis entre fontes
@@ -733,7 +730,7 @@ O que estamos chamando por compatibização?
 
 ## [Compatibilização da PNADc]{.theme-subtopic} {.smaller}
 
-:::nonincremental
+::: nonincremental
 O que estamos chamando por compatibização?
 
 - Harmonização de conceitos e variáveis entre fontes
@@ -747,7 +744,7 @@ Por que compatibilizar?
 
 ## [Compatibilização da PNADc]{.theme-subtopic} {.smaller}
 
-:::nonincremental
+::: nonincremental
 O que estamos chamando por compatibização?
 
 - Harmonização de conceitos e variáveis entre fontes
@@ -773,7 +770,7 @@ Como compatibilizar?
 
 ## [Exemplos de compatibilização da PNADc]{.theme-subtopic} {.smaller}
 
-::::: columns
+:::::: columns
 ::: {.column width="70%"}
 ![](images/compatibilizacao_ex1.png){fig-align="center" width="100%" height="100%"}
 :::
@@ -785,11 +782,11 @@ Como compatibilizar?
 - Assume-se o Caged, registro administrativo, como fonte de referência.
 :::
 ::::
-:::::
+::::::
 
 ## [Exemplos de compatibilização da PNADc]{.theme-subtopic} {.smaller}
 
-::::: columns
+:::::: columns
 ::: {.column width="70%"}
 ![](images/compatibilizacao_ex2.png){fig-align="center" width="100%" height="100%"}
 :::
@@ -803,11 +800,11 @@ Como compatibilizar?
 - Utilizada quando se pretende avaliar novas fontes de dados.
 :::
 ::::
-:::::
+::::::
 
 ## [Exemplos de compatibilização da PNADc]{.theme-subtopic} {.smaller}
 
-::::: columns
+:::::: columns
 ::: {.column width="70%"}
 ![](images/compatibilizacao_ex3.png){fig-align="center" width="100%" height="100%"}
 :::
@@ -819,11 +816,11 @@ Como compatibilizar?
 - Assume-se que a representatividade populacional de ambas as bases são semelhantes.
 :::
 ::::
-:::::
+::::::
 
 ## [Exemplos de compatibilização da PNADc]{.theme-subtopic} {.smaller}
 
-::::: columns
+:::::: columns
 ::: {.column width="70%"}
 ![](images/compatibilizacao_ex4.png){fig-align="center" width="100%" height="100%"}
 :::
@@ -835,7 +832,7 @@ Como compatibilizar?
 - Assume-se que embora os níveis não sejam semelhantes, a tendência deveria ser parecida.
 :::
 ::::
-:::::
+::::::
 
 # Próximos passos {.theme-first}
 

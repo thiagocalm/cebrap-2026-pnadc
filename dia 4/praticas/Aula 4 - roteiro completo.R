@@ -24,14 +24,14 @@ library(tidyverse)
 # Importação da base de dados ---------------------------------------------
 
 ###
-# Importação da base de dados 2024 concentrada na visita 1
+# Importação da base de dados 2025 concentrada na visita 1
 ###
 
 
 # baixando os dados diretamente do ibge
 
-# pnad_2024_v1 <- get_pnadc(
-#   year = 2024,
+# pnad_2025_v1 <- get_pnadc(
+#   year = 2025,
 #   interview = 1,
 #   labels = FALSE,
 #   design = TRUE # ja baixar com o plano amostral implementado
@@ -43,31 +43,31 @@ getwd() # antigo diretorio
 setwd(file.path(here::here(),"dia 4","praticas")) # configurando novo diretorio
 getwd() # novo diretorio configurado!
 
-pnad_2024_v1 <- read_pnadc(
-  microdata = "PNADC_2024_visita1_20250822.zip", # importando com arquivo 'zipado'
-  # microdata = "PNADC_2024_visita1_20250822.txt", # importando com arquivo 'unzipado'
-  input_txt = "input_PNADC_2024_visita1_20250822.txt"
+pnad_2025_v1 <- read_pnadc(
+  microdata = "PNADC_2025_visita1_20260923.zip", # importando com arquivo 'zipado'
+  # microdata = "PNADC_2025_visita1_20260923.txt", # importando com arquivo 'unzipado'
+  input_txt = "input_PNADC_2025_visita1_20260923.txt.txt"
 )
 
 # Deve ser rodado quando importamos os dados 'manualmente'
 
-class(pnad_2024_v1) # classe ainda é 'dataframe'
+class(pnad_2025_v1) # classe ainda é 'dataframe'
 
-pnad_2024_v1 <- pnadc_design(pnad_2024_v1) # aplicando o plano amostral
+pnad_2025_v1 <- pnadc_design(pnad_2025_v1) # aplicando o plano amostral
 
-class(pnad_2024_v1) # classe mudou para "svyrep.design"
+class(pnad_2025_v1) # classe mudou para "svyrep.design"
 
 # Filtro para trabalhar com Pop. Ocupada ----------------------------------
 
 # Criando estrato da base da PNADc
 
-class(pnad_2024_v1$variables$VD4002)
+class(pnad_2025_v1$variables$VD4002)
 
-pnad_ocupados <- subset(pnad_2024_v1, VD4002 == "1")
+pnad_ocupados <- subset(pnad_2025_v1, VD4002 == "1")
 
 # remover base de dados completos
 
-rm(pnad_2024_v1)
+rm(pnad_2025_v1)
 
 # limpar um pouco do espaco da memoria
 invisible(gc())
@@ -122,7 +122,7 @@ pnad_ocupados$variables |>
 # Link: https://sidra.ibge.gov.br/tabela/4191
 
 ###
-# 2 - Numero de pessoas potencialmente isentas do IRPF em 2024
+# 2 - Numero de pessoas potencialmente isentas do IRPF em 2025
 ###
 
 tabela_2 <- svytotal(
@@ -144,7 +144,7 @@ pnad_ocupados$variables |>
   )
 
 ###
-# 3 - Proporcao de pessoas potencialmente isentas do IRPF em 2024
+# 3 - Proporcao de pessoas potencialmente isentas do IRPF em 2025
 ###
 
 tabela_3 <- svymean(
@@ -174,7 +174,7 @@ tabela_4 <- svyby(
 
 tabela_4 # visualizando tabela
 
-# 5 - Proporcao de pessoas potencialemnte isentas do IRPF em 2024 por UF
+# 5 - Proporcao de pessoas potencialemnte isentas do IRPF em 2025 por UF
 
 tabela_5 <- svyby(
   formula =~ renda_isencao,
@@ -251,7 +251,7 @@ estimativas_espaciais |>
   scale_fill_viridis_c(option = 2,direction = -1) +
   guides(fill = guide_colourbar(title = "%")) +
   labs(
-    title = "Potencial parcela (%) de isentos do IRPFM em 2024 se a lei estivesse em vigor, por UF.",
+    title = "Potencial parcela (%) de isentos do IRPFM em 2025 se a lei estivesse em vigor, por UF.",
     caption = "Fonte: IBGE/PNADC, acumulado da primeira visita."
   ) +
   # tira sistema cartesiano
