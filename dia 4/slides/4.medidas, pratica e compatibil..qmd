@@ -777,14 +777,14 @@ Como compatibilizar?
 
 :::: {.column width="30%"}
 ::: nonincremental
-**Exemplo 1**: Avaliação da qualidade dos dados **da PNADc**[^ex1]:
+**Exemplo 1**: Avaliação da qualidade dos dados **da PNADc**[^4]:
 
 - Assume-se o Caged, registro administrativo, como fonte de referência.
 :::
 ::::
 ::::::
 
-[^ex1]: [Corseil e colegas (2022)](http://dx.doi.org/10.38116/978-65-5635-042-4/capitulo27).
+[^4]: [Corseil e colegas (2022)](http://dx.doi.org/10.38116/978-65-5635-042-4/capitulo27).
 
 ## [Exemplos de compatibilização da PNADc]{.theme-subtopic} {.smaller}
 
@@ -795,7 +795,7 @@ Como compatibilizar?
 
 :::: {.column width="30%"}
 ::: nonincremental
-**Exemplo 2**: Avaliação da qualidade dos dados **de registro administrativo**[^ex2]:
+**Exemplo 2**: Avaliação da qualidade dos dados **de registro administrativo**[^5]:
 
 - Assume-se a PNADc como a fonte de referência para as estimativas.
 
@@ -804,7 +804,7 @@ Como compatibilizar?
 ::::
 ::::::
 
-[^ex2]: [Almeida e colegas (2025)](https://repositorio.ipea.gov.br/handle/11058/17266).
+[^5]: [Almeida e colegas (2025)](https://repositorio.ipea.gov.br/handle/11058/17266).
 
 ## [Exemplos de compatibilização da PNADc]{.theme-subtopic} {.smaller}
 
@@ -815,14 +815,14 @@ Como compatibilizar?
 
 :::: {.column width="30%"}
 ::: nonincremental
-**Exemplo 3**: Proposição de uma nova unidade de análise não contida na PNADc[^ex3]:
+**Exemplo 3**: Proposição de uma nova unidade de análise não contida na PNADc[^6]:
 
 - Assume-se que a representatividade populacional de ambas as bases são semelhantes.
 :::
 ::::
 ::::::
 
-[^ex3]: [Insper (2024)](https://repositorio.insper.edu.br/handle/11224/6478).
+[^6]: [Insper (2024)](https://repositorio.insper.edu.br/handle/11224/6478).
 
 ## [Exemplos de compatibilização da PNADc]{.theme-subtopic} {.smaller}
 
@@ -833,14 +833,14 @@ Como compatibilizar?
 
 :::: {.column width="30%"}
 ::: nonincremental
-**Exemplo 4**: Comparação da PNADc com indicadores de trabalho e renda em períodos não cobertos[^ex4]:
+**Exemplo 4**: Comparação da PNADc com indicadores de trabalho e renda em períodos não cobertos[^7]:
 
 - Assume-se que embora os níveis não sejam semelhantes, a tendência deveria ser parecida.
 :::
 ::::
 ::::::
 
-[^ex4]: [Vaz e Barreira (2022)](https://dx.doi.org/10.1590/1980-53575145botc).
+[^7]: [Vaz e Barreira (2022)](https://dx.doi.org/10.1590/1980-53575145botc).
 
 # Próximos passos {.theme-first}
 

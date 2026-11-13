@@ -3,13 +3,14 @@
 #' --------------------------------------------------
 
 # ajustes gerais
-options(timeout = 1200, scipen = 9999)
+options(timeout = 1200, scipen = 999)
 invisible(gc()) # liberar de espaco nao utilizado da memoria do computador
 
 # Importacao de biblioteca ------------------------------------------------
 
 #install.packages("PNADcIBGE")
 #install.packages("survey")
+#install.packages("tidyverse")
 
 library(PNADcIBGE)
 library(survey)
@@ -19,7 +20,7 @@ library(tidyverse)
 # UF
 # VD4002 - Condicao de ocupacao (VD4002 == 1, população ocupada)
 # VD4017 - Rendimento mensal efetivo do trabalho principal
-# V2009 - Idade
+# V1032 - peso amostral, para estimativas pontuais
 
 # Importação da base de dados ---------------------------------------------
 
@@ -32,9 +33,9 @@ library(tidyverse)
 
 # pnad_2025_v1 <- get_pnadc(
 #   year = 2025,
-#   interview = 1,
-#   labels = FALSE,
-#   design = TRUE # ja baixar com o plano amostral implementado
+#   interview = 1,  # dados concentrados na entrevista 1
+#   labels = FALSE, # optamos por não atribuir os rotulos na importação
+#   design = FALSE  # optamos por não atribuir o plano amostral na importação
 # )
 
 # importando offline (lembre-se de configurar o working directory antes!!!)
@@ -46,10 +47,10 @@ getwd() # novo diretorio configurado!
 pnad_2025_v1 <- read_pnadc(
   microdata = "PNADC_2025_visita1_20260923.zip", # importando com arquivo 'zipado'
   # microdata = "PNADC_2025_visita1_20260923.txt", # importando com arquivo 'unzipado'
-  input_txt = "input_PNADC_2025_visita1_20260923.txt.txt"
+  input_txt = "input_PNADC_2025_visita1_20260923.txt"
 )
 
-# Deve ser rodado quando importamos os dados 'manualmente'
+# Deve ser rodada quando não aplicamos o plano amostral desde o princípio
 
 class(pnad_2025_v1) # classe ainda é 'dataframe'
 
@@ -57,13 +58,17 @@ pnad_2025_v1 <- pnadc_design(pnad_2025_v1) # aplicando o plano amostral
 
 class(pnad_2025_v1) # classe mudou para "svyrep.design"
 
+# analisando a estrutura dos nossos dados
+
+head(pnad_2025_v1$variables)
+
 # Filtro para trabalhar com Pop. Ocupada ----------------------------------
 
 # Criando estrato da base da PNADc
 
-class(pnad_2025_v1$variables$VD4002)
+class(pnad_2025_v1$variables$VD4002) # está como variável de texto
 
-pnad_ocupados <- subset(pnad_2025_v1, VD4002 == "1")
+pnad_ocupados <- subset(pnad_2025_v1, VD4002 == "1") # criando estrato para casos VD4002 == 1
 
 # remover base de dados completos
 
@@ -91,12 +96,14 @@ class(pnad_ocupados$variables$renda_isencao) # verificando se a variavel foi cri
 
 pnad_ocupados$variables <- transform(
   pnad_ocupados$variables,
-  valor = 1
+  valor = 1L
 )
 
 class(pnad_ocupados$variables$valor) # verificando se a variavel foi criada
 
 # Analises ----------------------------------------------------------------
+# Deste momento em diante, começaremos a trabalhar com o pacote 'survey'
+# para análises descritivas.
 
 ###
 # 1 - Numero de pessoas ocupadas
@@ -111,11 +118,10 @@ tabela_1 <- svytotal(
 tabela_1 # visualizando tabela
 
 # Estrategia alternativa de gerar os mesmos valores sem aplicar o survey design
+# estimativa pontual
 
-pnad_ocupados$variables |>
-  summarise(
-    n = sum(V1032)
-  )
+summarise(pnad_ocupados$variables,
+          total = sum(V1032))
 
 # BOA PRÁTICA!: Verificar se converge com estimativas de PO do SIDRA
 # Ver tabela 4191 do Sidra
@@ -155,7 +161,9 @@ tabela_3 <- svymean(
 
 tabela_3 # visualizando tabela
 
+###
 # 4 - Rendimento médio do trabalho principal por grupo de potencialmente isento
+###
 
 # Funcao 'svyby':
 # Para utilizá-la são necessários os seguintes argumentos:
@@ -165,8 +173,8 @@ tabela_3 # visualizando tabela
 #  - A função utilizada para calcular a quantidade de interesse (svytotal, svymean, svyratio, svyquantile, …).
 
 tabela_4 <- svyby(
-  formula =~ VD4017, # variavel que eu tenho interesse de representar
-  by =~ renda_isencao, # grupo de interesse para a desagregação
+  formula = ~ VD4017, # variavel que eu tenho interesse de representar
+  by = ~ renda_isencao, # grupo de interesse para a desagregação
   FUN = svymean, # funcao de interesse relacionado à medida
   design = pnad_ocupados,
   na.rm = TRUE
@@ -184,7 +192,8 @@ tabela_5 <- svyby(
   na.rm = TRUE
 )
 
-arrange(tabela_5,desc(renda_isencaoPotencial_Isencao)) # visualizando tabela
+arrange(tabela_5,
+        desc(renda_isencaoPotencial_Isencao)) # visualizando tabela
 
 # Avaliando nossas estimativas principais
 
@@ -192,7 +201,7 @@ confint(tabela_5) # intervalo de confianca
 
 # forma de calculo do cv: erro padrão / media - para interpretacao, ver slides 'dia 2'
 
-cv(object=tabela_5) * 100 # coeficiente de variacao
+cv(tabela_5) * 100 # coeficiente de variacao
 
 # Extra! ------------------------------------------------------------------
 ###
